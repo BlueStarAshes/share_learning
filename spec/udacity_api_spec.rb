@@ -4,7 +4,7 @@ require 'json'
 
 require_relative 'udacity_api'
 
-COURSE_DATA = JSON.parse(File.read('./data/course_test_data.json'))
+COURSE_DATA = JSON.parse(File.read('course_test_data.json'))
 
 describe 'Udacity api' do
   it 'should get json response successfully' do
