@@ -2,7 +2,7 @@ require 'http'
 require 'json'
 
 # This class is in charge of the work involving using Coursera API
-class CourseraCatlogApi
+class CourseraApi
   COURSERA_CATOLOG_API_URL = 'https://api.coursera.org/api/courses.v1'.freeze
   BATCH_SIZE = 100
 
