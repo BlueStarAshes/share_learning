@@ -5,7 +5,7 @@ require '../lib/coursera_api.rb'
 
 describe 'Coursera API specifications' do
   before do
-    @coursera_api = CourseraApi.new
+    @coursera_api = Coursera::CourseraApi.new
   end
   it 'should be able to retrieve how many the courses are on the
       Coursera catlog' do
