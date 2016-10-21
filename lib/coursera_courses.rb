@@ -16,10 +16,14 @@ module Coursera
       count = 0
       @courses.size.times do
         course = @courses[count]
-        puts "Course #{count}: #{course[:course_name]}"
+        puts "Course #{count}:"
+        puts "\tTitle: #{course[:course_name]}"
         puts "\tType: #{course[:course_type]}"
         puts "\tID: #{course[:course_id]}"
         puts "\tSlug: #{course[:course_slug]}"
+        puts "\tLink: #{course[:link]}"
+        puts "\tDescription: #{course[:description]}"
+        puts "\tPhoto URL: #{course[:photo_url]}"
         puts
         count += 1
       end

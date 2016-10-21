@@ -5,6 +5,7 @@ module Coursera
   # This class is in charge of the work involving using Coursera API
   class CourseraApi
     COURSERA_CATOLOG_API_URL = 'https://api.coursera.org/api/courses.v1'.freeze
+    COURSERA_COURSE_LINK_BASE = 'https://www.coursera.org/learn/'.freeze
     BATCH_SIZE = 100
 
     attr_reader :total_course_num, :courses
@@ -33,7 +34,8 @@ module Coursera
       query_response =
         HTTP.get(COURSERA_CATOLOG_API_URL,
                  params: { start: course_start_num,
-                           limit: course_num_limit })
+                           limit: course_num_limit,
+                           fields: 'description,photoUrl' })
       body_str = query_response.body.to_s
       retrieved_batch[:courses] = JSON.parse(body_str)['elements']
       retrieved_batch
@@ -49,6 +51,10 @@ module Coursera
         parsed_courses[count][:course_id] = course['id']
         parsed_courses[count][:course_slug] = course['slug']
         parsed_courses[count][:course_name] = course['name']
+        parsed_courses[count][:link] =
+          COURSERA_COURSE_LINK_BASE + course['slug']
+        parsed_courses[count][:description] = course['description']
+        parsed_courses[count][:photo_url] = course['photoUrl']
         count += 1
       end
       parsed_courses
