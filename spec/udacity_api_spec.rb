@@ -2,55 +2,43 @@ require 'minitest/autorun'
 require 'minitest/rg'
 require 'json'
 
-require '../lib/udacity_api.rb'
+require '../lib/udacity_course.rb'
 
-COURSE_DATA = JSON.parse(File.read('data/course_test_data.json'))
+COURSE_DATA = JSON.parse(File.read('data/course_test_data.json'), :symbolize_names => true)
 
-describe 'Udacity api' do
+describe 'Udacity course' do
   it 'should get json response successfully' do
-    udacity = UdacityAPI.new
-    response = udacity.acquire_json_response
-    response.nil?.must_equal false
+    udacity = Udacity::UdacityCourse.new(Udacity::UdacityAPI.new)
+    udacity.json_response.nil?.must_equal false
   end
 
   it 'should get all courses successfully' do
-    udacity = UdacityAPI.new
-    response = udacity.acquire_json_response
-    all_courses = udacity.get_all_courses(response)
+    udacity = Udacity::UdacityCourse.new(Udacity::UdacityAPI.new)
+    all_courses = udacity.acquire_all_courses
     all_courses.nil?.must_equal false
   end
 
   it 'should get course by id successfully' do
-    udacity = UdacityAPI.new
-    response = udacity.acquire_json_response
-    course = udacity.get_course_by_id(response, 'cs101')
-    title = COURSE_DATA['course'][0]['get_course_by_id'][0]['title']
-    homepage = COURSE_DATA['course'][0]['get_course_by_id'][0]['homepage']
-
-    course.must_equal (title + "\nhomepage: " + homepage)
+    udacity = Udacity::UdacityCourse.new(Udacity::UdacityAPI.new)
+    course = udacity.acquire_course_by_id('cs101')
+    course.must_equal ( COURSE_DATA[:get_course_by_id] )
   end
 
   it 'should get course by title successfully' do
-    udacity = UdacityAPI.new
-    response = udacity.acquire_json_response
-    course = udacity.get_course_by_title(response, 'Intro to Java Programming')
-    title = COURSE_DATA['course'][0]['get_course_by_title'][0]['title']
-    homepage = COURSE_DATA['course'][0]['get_course_by_title'][0]['homepage']
-
-    course.must_equal (title + "\nhomepage: " + homepage)
+    udacity = Udacity::UdacityCourse.new(Udacity::UdacityAPI.new)
+    course = udacity.acquire_course_by_title('Intro to Java Programming')
+    course.must_equal ( COURSE_DATA[:get_course_by_title] )   
   end
 
   it 'should get courses by level successfully' do
-    udacity = UdacityAPI.new
-    response = udacity.acquire_json_response
-    course = udacity.get_course_by_level(response, 'beginner')
+    udacity = Udacity::UdacityCourse.new(Udacity::UdacityAPI.new)
+    course = udacity.acquire_courses_by_level('beginner')
     course.nil?.must_equal false
   end
 
   it 'should get courses by tracks successfully' do
-    udacity = UdacityAPI.new
-    response = udacity.acquire_json_response
-    course = udacity.get_course_by_tracks(response, 'Data Science')
+    udacity = Udacity::UdacityCourse.new(Udacity::UdacityAPI.new)
+    course = udacity.acquire_courses_by_tracks('Data Science')
     course.nil?.must_equal false
   end
 end

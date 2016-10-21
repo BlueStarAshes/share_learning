@@ -1,18 +1,17 @@
 {
-	"course":[
+	"get_course_by_id":
 		{
-			"get_course_by_id":[
-				{
-					"title": "Intro to Computer Science",
-					"homepage": "https://www.udacity.com/course/intro-to-computer-science--cs101?utm_medium=referral&utm_campaign=api"
-				}
-			],
-			"get_course_by_title":[
-				{
-					"title": "Intro to Java Programming",
-					"homepage": "https://www.udacity.com/course/intro-to-java-programming--cs046?utm_medium=referral&utm_campaign=api"
-				}
-			]
+			"title": "Intro to Computer Science",
+			"intro": "In this introduction to computer programming course, you’ll learn and practice key computer science concepts by building your own versions of popular web applications. You’ll learn Python, a powerful, easy-to-learn, and widely used programming language, and you’ll explore computer science basics, as you build your own search engine and social network.",
+			"link": "https://www.udacity.com/course/intro-to-computer-science--cs101?utm_medium=referral&utm_campaign=api",
+			"image": "https://lh5.ggpht.com/ITepKi-2pz4Q6lrLfv6QDNViEGIfxyupzgQwx1YgS4L8m3MFITBKWDpaZb_VoAP-zV3bEEoIbFY7mauj8HM=s0#w=1724&h=1060"
 		}
-	]
+	,
+	"get_course_by_title":
+		{
+			"title": "Intro to Java Programming",
+			"intro": "In this introductory course, you'll learn and practice essential computer science concepts using the Java programming language. You'll learn about Object Oriented Programming, a technique that allows you to use code written by other programmers in your own programs. You'll put your new Java programming skills to the test by solving real-world problems faced by software engineers.",
+			"link": "https://www.udacity.com/course/intro-to-java-programming--cs046?utm_medium=referral&utm_campaign=api",
+			"image": "https://lh4.ggpht.com/9ytiUdz0QYHwuMJFTXcNXZn4FctGW6Zszm7Aj5s7mXHHXsapIKYPL08vPWeghAjF2QmuhPiYCU2Q3kNeW7w=s0#w=1725&h=1060"
+		}
 }

@@ -9,54 +9,63 @@ module Udacity
 
     def initialize(udacity_api)
       @udacity_api = udacity_api
-      @json_response = @udacity_api.new.acquire_json_response
+      @json_response = @udacity_api.acquire_json_response
     end
-    
+
     # get all courses information
-    def get_all_courses
-      output = ''
+    def acquire_all_courses
+      course_array = []
       @json_response['courses'].each do |course|
-        output += course['title'] + "\nhomepage: " + course['homepage']
+        h = { title: course['title'], intro: course['summary'], \
+              link: course['homepage'], image: course['image'] }
+        course_array.push(h)
       end
-      output
+      course_array
     end
 
     # get course information by course id
-    def get_course_by_id(id)
+    def acquire_course_by_id(id)
       @json_response['courses'].each do |course|
         next unless course['key'] == id
-        return course['title'] + "\nhomepage: " + course['homepage']
+        h = { title: course['title'], intro: course['summary'], \
+              link: course['homepage'], image: course['image'] }
+        return h
+        # return course['title'] + "\nhomepage: " + course['homepage']
       end
     end
 
     # get course information by course title
-    def get_course_by_title(title)
+    def acquire_course_by_title(title)
       @json_response['courses'].each do |course|
         next unless course['title'] == title
-        return course['title'] + "\nhomepage: " + course['homepage']
+        h = { title: course['title'], intro: course['summary'], \
+              link: course['homepage'], image: course['image'] }
+        return h
+        # return course['title'] + "\nhomepage: " + course['homepage']
       end
     end
 
     # get courses by skill levels ('', 'beginner', 'intermediate', 'advanced')
-    def get_course_by_level(level)
-      output = ''
+    def acquire_courses_by_level(level)
+      course_array = []
       @json_response['courses'].each do |course|
-        if course['level'] == level
-          output += course['title'] + "\nhomepage: " + course['homepage']
-        end
+        next unless course['level'] == level
+        h = { title: course['title'], intro: course['summary'], \
+              link: course['homepage'], image: course['image'] }
+        course_array.push(h)
       end
-      output
+      course_array
     end
 
-    # get courses by tracks
-    def get_course_by_tracks(track_name)
-      output = ''
+    # get courses by tracks (return a list of course id)
+    def acquire_courses_by_tracks(track_name)
       @json_response['tracks'].each do |track|
-        if track['name'] == track_name
-          output += 'courses id: ' + track['courses'].inspect
-        end
+        next unless track['name'] == track_name
+        return track['courses'].inspect
       end
-      output
     end
   end
+  # course = UdacityCourse.new(Udacity::UdacityAPI.new)
+  # test = course.acquire_courses_by_tracks('Data Science')
+  # puts test
 end
