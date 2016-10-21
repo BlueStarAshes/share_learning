@@ -8,10 +8,10 @@ require 'yaml'
 require 'vcr'
 require 'webmock'
 
-require_relative '../lib/udacity_api'
-require_relative '../lib/udacity_course'
+require_relative '../lib/udacity_api.rb'
+require_relative '../lib/udacity_course.rb'
 
-FIXTURES_FOLDER = 'fixtures'
+FIXTURES_FOLDER = 'spec/fixtures'
 CASSETTES_FOLDER = "#{FIXTURES_FOLDER}/cassettes"
 CASSETTE_FILE = 'udacity_api'
 # CREDENTIALS = YAML.load(File.read('config/credentials.yml'))
