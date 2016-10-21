@@ -30,7 +30,6 @@ module Udacity
         h = { title: course['title'], intro: course['summary'], \
               link: course['homepage'], image: course['image'] }
         return h
-        # return course['title'] + "\nhomepage: " + course['homepage']
       end
     end
 
@@ -41,7 +40,6 @@ module Udacity
         h = { title: course['title'], intro: course['summary'], \
               link: course['homepage'], image: course['image'] }
         return h
-        # return course['title'] + "\nhomepage: " + course['homepage']
       end
     end
 
@@ -65,7 +63,4 @@ module Udacity
       end
     end
   end
-  # course = UdacityCourse.new(Udacity::UdacityAPI.new)
-  # test = course.acquire_courses_by_tracks('Data Science')
-  # puts test
 end
