@@ -7,9 +7,9 @@ module Udacity
   class UdacityCourse
     attr_reader :json_response
 
-    def initialize(udacity_api)
+    def initialize(udacity_api, data)
       @udacity_api = udacity_api
-      @json_response = @udacity_api.acquire_json_response
+      @json_response = data
     end
 
     # get all courses information
@@ -62,5 +62,10 @@ module Udacity
         return track['courses'].inspect
       end
     end
+
+    def self.find(udacity_api)
+      course_data = udacity_api.acquire_json_response
+      new(udacity_api, course_data)
+    end    
   end
 end

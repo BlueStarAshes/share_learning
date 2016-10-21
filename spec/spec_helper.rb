@@ -5,6 +5,7 @@ require 'yaml'
 require 'vcr'
 require 'webmock'
 
+require_relative '../lib/udacity_api'
 require_relative '../lib/udacity_course'
 
 FIXTURES_FOLDER = 'fixtures'

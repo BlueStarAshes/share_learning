@@ -44,9 +44,9 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Cloud-Trace-Context:
-      - 19b3902ae1521eceac76ead5620b6478;o=5
+      - ca9ee8f20755b65333ba9cf0ca259af1
       Date:
-      - Fri, 21 Oct 2016 05:46:52 GMT
+      - Fri, 21 Oct 2016 06:20:00 GMT
       Server:
       - Google Frontend
       Content-Length:
@@ -54,7 +54,7 @@ http_interactions:
       Cache-Control:
       - public, max-age=1800
       Age:
-      - '1253'
+      - '718'
       Connection:
       - close
       X-Berlioz-Country:
@@ -11364,7 +11364,7 @@ http_interactions:
         for the curriculum level. (We require past programming experience.)", "expected_duration":
         6}]}'
     http_version: 
-  recorded_at: Fri, 21 Oct 2016 06:07:47 GMT
+  recorded_at: Fri, 21 Oct 2016 06:31:59 GMT
 - request:
     method: get
     uri: https://www.udacity.com/public-api/v0/courses
@@ -11409,9 +11409,9 @@ http_interactions:
       Access-Control-Allow-Origin:
       - "*"
       X-Cloud-Trace-Context:
-      - b88de7c5e38e1dfcc50b6d99c0678528
+      - ca9ee8f20755b65333ba9cf0ca259af1
       Date:
-      - Fri, 21 Oct 2016 05:47:36 GMT
+      - Fri, 21 Oct 2016 06:20:00 GMT
       Server:
       - Google Frontend
       Content-Length:
@@ -11419,7 +11419,7 @@ http_interactions:
       Cache-Control:
       - public, max-age=1800
       Age:
-      - '1212'
+      - '720'
       Connection:
       - close
       X-Berlioz-Country:
@@ -22729,5 +22729,5 @@ http_interactions:
         for the curriculum level. (We require past programming experience.)", "expected_duration":
         6}]}'
     http_version: 
-  recorded_at: Fri, 21 Oct 2016 06:07:49 GMT
+  recorded_at: Fri, 21 Oct 2016 06:32:03 GMT
 recorded_with: VCR 3.0.3
