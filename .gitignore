@@ -2,3 +2,4 @@ config/
 .DS_Store
 spec/.DS_Store
 lib/.DS_Store
+spec/data/.DS_Store
