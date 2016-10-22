@@ -19,12 +19,12 @@ namespace :quality do
   task all: [:flog, :flay]
 
   task :flog do
-    sh 'flog lib/coursera_api*'
+    sh 'flog lib/coursera_*'
     puts "\n\n"
   end
 
   task :flay do
-    sh 'flay lib/coursera_api*'
+    sh 'flay lib/coursera_*'
     puts "\n\n"
   end
 end
