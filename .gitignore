@@ -1,2 +1,6 @@
-credentials.yml
-udacity_response.yml
+config/
+.DS_Store
+spec/.DS_Store
+lib/.DS_Store
+spec/data/.DS_Store
+coverage/
