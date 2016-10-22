@@ -1,7 +1,4 @@
-require 'minitest/autorun'
-require 'minitest/rg'
-
-require_relative '../lib/coursera_courses.rb'
+require_relative 'coursera_api_spec_helper'
 
 describe 'Coursera API specifications' do
   before do
