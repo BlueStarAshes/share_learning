@@ -1,21 +1,22 @@
 require 'minitest/autorun' 
 require 'minitest/rg' 
+require 'yaml'
 require 'json'
 
-require_relative 'youtube_api'
-RESULTS = JSON.parse(File.read('spec/videos_test_data.json'))
+require_relative '../lib/youtube_playlist'
+CREDENTIALS = YAML.load(File.read('../config/credentials.yml'))
+RESULTS = JSON.parse(File.read('fixtures/youtube_response.json'))
 
 describe 'YouTube API' do
-  it 'should identify valid the API key' do
-    youtubeAPI = YouTubeAPI.new
-    access = youtubeAPI.valid_APIkey
-    access["reason"].must_equal ('true')
+  before do
+    @youtube_api = YouTube::YouTubeAPI.new(
+      api_key: CREDENTIALS[:api_key], 
+      keyword: 'machine learning'
+    )
   end
-
-  it 'should get videos by keyword' do
-    youtubeAPI = YouTubeAPI.new
-    videos = youtubeAPI.get_videos('machine learning'.split().join("+"))
-    videos = {"items"=>videos}
-    videos.must_equal (RESULTS)
+  it 'should get playlist by keyword' do
+    courses = YouTube::YouTubePlaylist.new(@youtube_api)
+    #courses.print_playlist_info
+    courses.playlists.size.must_be :>=, 0
   end	
 end
