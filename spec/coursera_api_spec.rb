@@ -9,13 +9,13 @@ describe 'Coursera API specifications' do
   end
   it 'should be able to retrieve how many the courses are on the
       Coursera catlog' do
-    # @coursera_api.total_course_num.must_be :>=, 0
-    coursera_courses = Coursera::CourseraCourses.new(@coursera_api)
+    # coursera_courses = Coursera::CourseraCourses.new(@coursera_api)
+    coursera_courses = Coursera::CourseraCourses.find(@coursera_api)
     coursera_courses.total_course_num.must_be :>=, 0
   end
   it 'should be able to retrieve correct number of all courses' do
-    # @coursera_api.courses.size.must_equal @coursera_api.total_course_num
-    coursera_courses = Coursera::CourseraCourses.new(@coursera_api)
+    # coursera_courses = Coursera::CourseraCourses.new(@coursera_api)
+    coursera_courses = Coursera::CourseraCourses.find(@coursera_api)
     coursera_courses.courses.size.must_equal coursera_courses.total_course_num
   end
 end

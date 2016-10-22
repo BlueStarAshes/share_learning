@@ -5,10 +5,16 @@ module Coursera
   class CourseraCourses
     attr_reader :total_course_num, :courses
 
-    def initialize(coursera_api)
+    def initialize(coursera_api, total_course_num, courses)
       @coursera_api = coursera_api
-      @total_course_num = @coursera_api.retrieve_total_course_num
-      @courses = @coursera_api.retrieve_all_courses
+      @total_course_num = total_course_num
+      @courses = courses
+    end
+
+    def self.find(coursera_api)
+      total_course_num = coursera_api.retrieve_total_course_num
+      courses = coursera_api.retrieve_all_courses
+      new(coursera_api, total_course_num, courses)
     end
 
     def print_all_courses
