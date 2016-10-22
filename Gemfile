@@ -1,12 +1,15 @@
-<<<<<<< HEAD
 source 'https://rubygems.org'
 
 gem 'http'
-=======
-# frozen_string_literal: true
-# A sample Gemfile
-source "https://rubygems.org"
-gem 'google-api-client', '<0.9'
-# gem "rails"
+
+gem 'minitest'
+gem 'minitest-rg'
+gem 'rake'
+gem 'vcr'
+gem 'webmock'
+gem 'simplecov'
+
+gem 'flog'
+gem 'flay'
 gem 'trollop', '~> 2.1'
->>>>>>> ashleycheng
+
