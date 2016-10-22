@@ -3,3 +3,4 @@ config/
 spec/.DS_Store
 lib/.DS_Store
 spec/data/.DS_Store
+coverage/

@@ -6,5 +6,6 @@ gem 'minitest'
 gem 'minitest-rg'
 gem 'vcr'
 gem 'webmock'
+gem 'simplecov'
 
 gem 'flog'
