@@ -9,3 +9,4 @@ gem 'webmock'
 gem 'simplecov'
 
 gem 'flog'
+gem 'flay'
