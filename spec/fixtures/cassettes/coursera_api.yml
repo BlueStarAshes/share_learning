@@ -23,20 +23,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:10:26 GMT
+      - Sat, 22 Oct 2016 07:32:19 GMT
       Etag:
       - W/"-2089926472"
       Set-Cookie:
-      - CSRF3-Token=1477980626.HNRsx3EcOucaaQkY; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:10:26 GMT; Path=/; Domain=.coursera.org
-      - __204u=3877726121-1477116626140; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:10:26 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985539.1DsGvQRyGvtOTwPW; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:32:19 GMT; Path=/; Domain=.coursera.org
+      - __204u=6705112240-1477121539121; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:32:19 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - OW7rIZgeEeahzBIBejHCWw
+      - qcx645gpEea5hAr8bj1CNQ
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -49,7 +49,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"elements":[],"paging":{"next":"0","total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:10:26 GMT
+  recorded_at: Sat, 22 Oct 2016 07:32:17 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?limit=0&start=0
@@ -73,20 +73,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:10:27 GMT
+      - Sat, 22 Oct 2016 07:32:20 GMT
       Etag:
       - W/"-2089926472"
       Set-Cookie:
-      - CSRF3-Token=1477980627.U0buyuJP2u1I1CPT; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:10:27 GMT; Path=/; Domain=.coursera.org
-      - __204u=9376208816-1477116627607; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:10:27 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985540.b75R37F8LG2TpJdn; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:32:20 GMT; Path=/; Domain=.coursera.org
+      - __204u=4794106166-1477121540204; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:32:20 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - Ok7DaZgeEeac_A4d-Hux4w
+      - qnG7CpgpEeaFuA50SqgcuQ
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -99,7 +99,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"elements":[],"paging":{"next":"0","total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:10:27 GMT
+  recorded_at: Sat, 22 Oct 2016 07:32:18 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?fields=description,photoUrl&limit=100&start=0
@@ -123,20 +123,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:10:28 GMT
+      - Sat, 22 Oct 2016 07:32:21 GMT
       Etag:
-      - W/"543752055"
+      - W/"825111188"
       Set-Cookie:
-      - CSRF3-Token=1477980628.wBLytNbc9RU857nt; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:10:28 GMT; Path=/; Domain=.coursera.org
-      - __204u=5481090605-1477116628596; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:10:28 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985541.u2yzmXz9RlGACLtj; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:32:21 GMT; Path=/; Domain=.coursera.org
+      - __204u=8865559839-1477121541292; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:32:21 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - OuXTV5geEea7ewrcTyuPnQ
+      - qxUnh5gpEeaYBgpPmgUorQ
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -1413,7 +1413,7 @@ http_interactions:
         research.\n","photoUrl":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/b7/47a830352b11e4a4351b48ac74e750/coursera_logo.png","name":"The
         Caltech-JPL Summer School on Big Data Analytics","id":"v1-1973","slug":"bigdataschool"}],"paging":{"next":"100","total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:10:30 GMT
+  recorded_at: Sat, 22 Oct 2016 07:32:21 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?fields=description,photoUrl&limit=100&start=100
@@ -1437,20 +1437,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:10:32 GMT
+      - Sat, 22 Oct 2016 07:32:24 GMT
       Etag:
-      - W/"-1195444359"
+      - W/"1698792413"
       Set-Cookie:
-      - CSRF3-Token=1477980632.LHK4xB4PmHl29kes; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:10:32 GMT; Path=/; Domain=.coursera.org
-      - __204u=4945246827-1477116632080; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:10:32 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985544.CdKpVzza3h8FoJ91; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:32:24 GMT; Path=/; Domain=.coursera.org
+      - __204u=3485022408-1477121544411; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:32:24 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - PPlxR5geEeaPYwrFIo2Xcw
+      - rPOq85gpEea5hAr8bj1CNQ
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -2738,7 +2738,7 @@ http_interactions:
         also introduce probability.","photoUrl":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/f6/5d96f0977311e5ad0793158b451d11/CSV-logo-chapter-4-copy.jpg","id":"FXS00V1oEeWK1woL5P9cGQ","slug":"applications-calculus","name":"Calculus:
         Single Variable Part 4 - Applications"}],"paging":{"next":"200","total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:10:34 GMT
+  recorded_at: Sat, 22 Oct 2016 07:32:24 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?fields=description,photoUrl&limit=100&start=200
@@ -2762,20 +2762,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:10:35 GMT
+      - Sat, 22 Oct 2016 07:32:28 GMT
       Etag:
-      - W/"1375287921"
+      - W/"721618835"
       Set-Cookie:
-      - CSRF3-Token=1477980635.RuTXFYqKGgiOEL93; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:10:35 GMT; Path=/; Domain=.coursera.org
-      - __204u=8939998234-1477116635807; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:10:35 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985548.8gkCegz8bIHFRdhZ; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:32:28 GMT; Path=/; Domain=.coursera.org
+      - __204u=3153231850-1477121548122; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:32:28 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - PzH825geEeaYBgpPmgUorQ
+      - rynr3ZgpEeaBHwomDb2Viw
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -4260,7 +4260,7 @@ http_interactions:
         will guide the student into seven critical topics in global health.","photoUrl":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/94/d720f0352b11e49dc56df018365453/Logo.png","name":"Global
         Health: An Interdisciplinary Overview","id":"v1-430","slug":"globalhealthoverview"}],"paging":{"next":"300","total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:10:37 GMT
+  recorded_at: Sat, 22 Oct 2016 07:32:30 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?fields=description,photoUrl&limit=100&start=300
@@ -4284,20 +4284,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:10:39 GMT
+      - Sat, 22 Oct 2016 07:32:33 GMT
       Etag:
-      - W/"746895680"
+      - W/"-215400570"
       Set-Cookie:
-      - CSRF3-Token=1477980639.wJVnkCOOTFbtvoMe; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:10:39 GMT; Path=/; Domain=.coursera.org
-      - __204u=8320247529-1477116639188; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:10:39 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985553.lwcP4p4DHS42ZDdb; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:32:33 GMT; Path=/; Domain=.coursera.org
+      - __204u=1650059417-1477121553876; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:32:33 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - QTXi4JgeEeah8xJL9koqSQ
+      - spfpm5gpEeac_A4d-Hux4w
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -5608,7 +5608,7 @@ http_interactions:
         useful for the class, but not required.","photoUrl":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/eb/cf8c0e7e0bb418255e48fe210446c1/bootcamp_B-02.jpg","name":"Mathematical
         Biostatistics Boot Camp 1","id":"qogqSFgBEeWBNwpVGuknww","slug":"biostatistics"}],"paging":{"next":"400","total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:10:41 GMT
+  recorded_at: Sat, 22 Oct 2016 07:32:34 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?fields=description,photoUrl&limit=100&start=400
@@ -5632,20 +5632,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:10:42 GMT
+      - Sat, 22 Oct 2016 07:32:37 GMT
       Etag:
-      - W/"1111289786"
+      - W/"1597529792"
       Set-Cookie:
-      - CSRF3-Token=1477980642.moJykriadrAIex9y; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:10:42 GMT; Path=/; Domain=.coursera.org
-      - __204u=8439408151-1477116642754; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:10:42 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985557.NdR1llUkENDY5506; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:32:37 GMT; Path=/; Domain=.coursera.org
+      - __204u=1850957154-1477121557336; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:32:37 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - Q1YqW5geEeaFuA50SqgcuQ
+      - tKfeaJgpEea0qBLvaTsEWw
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -7038,7 +7038,7 @@ http_interactions:
         and onlinemba.illinois.edu.","photoUrl":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/46/746ad0ef8d11e5a806af8e89269560/Acc_Logo_Capstone.png","id":"JL4MXe-NEeW4_wr--Yv6Aw","slug":"accounting-fundamentals-project","name":"Fundamentals
         of Accounting Capstone"}],"paging":{"next":"500","total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:10:44 GMT
+  recorded_at: Sat, 22 Oct 2016 07:32:39 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?fields=description,photoUrl&limit=100&start=500
@@ -7062,20 +7062,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:10:45 GMT
+      - Sat, 22 Oct 2016 07:32:42 GMT
       Etag:
-      - W/"1025531526"
+      - W/"-26165604"
       Set-Cookie:
-      - CSRF3-Token=1477980645.gDUcrhf592l6hwp8; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:10:45 GMT; Path=/; Domain=.coursera.org
-      - __204u=7463411022-1477116645504; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:10:45 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985562.3I8RYAY0RoTXj2Kr; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:32:42 GMT; Path=/; Domain=.coursera.org
+      - __204u=5131793504-1477121562531; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:32:42 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - RPnIhZgeEeaFuA50SqgcuQ
+      - t8Bo-JgpEeac_A4d-Hux4w
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -8480,7 +8480,7 @@ http_interactions:
         fotografías del usuario a sus aplicaciones.","photoUrl":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/3c/ed60e03af011e5b76837d3bdb47f88/Fondote_2.1.jpg","id":"S7NS8xoFEeWwrBKfKrqlSQ","slug":"hardware-ios","name":"Interactuando
         con el hardware del dispositivo iOS"}],"paging":{"next":"600","total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:10:48 GMT
+  recorded_at: Sat, 22 Oct 2016 07:32:42 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?fields=description,photoUrl&limit=100&start=600
@@ -8504,20 +8504,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:10:50 GMT
+      - Sat, 22 Oct 2016 07:32:45 GMT
       Etag:
-      - W/"2115288360"
+      - W/"-1220373318"
       Set-Cookie:
-      - CSRF3-Token=1477980650.lIFilqJnQs6Ae5xB; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:10:50 GMT; Path=/; Domain=.coursera.org
-      - __204u=6647741946-1477116650042; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:10:50 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985565.KdYJjpp4YdhQ7Xbs; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:32:45 GMT; Path=/; Domain=.coursera.org
+      - __204u=9216020234-1477121565561; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:32:45 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - R64TUpgeEeaBHwomDb2Viw
+      - uY7m85gpEeaFuA50SqgcuQ
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -9811,7 +9811,7 @@ http_interactions:
         of purpose, content, and technique.","photoUrl":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/da/b2f0e0617b11e5909fff9439107804/Student.jpg","id":"d64E7li7EeWylgpjfV1KVQ","slug":"language-theories","name":"Teach
         English Now! Theories of Second Language Acquisition"}],"paging":{"next":"700","total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:10:52 GMT
+  recorded_at: Sat, 22 Oct 2016 07:32:46 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?fields=description,photoUrl&limit=100&start=700
@@ -9835,20 +9835,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:10:53 GMT
+      - Sat, 22 Oct 2016 07:32:49 GMT
       Etag:
-      - W/"-1153441553"
+      - W/"1603795727"
       Set-Cookie:
-      - CSRF3-Token=1477980653.bvNB7FWBWv14aHyn; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:10:53 GMT; Path=/; Domain=.coursera.org
-      - __204u=8097614413-1477116653244; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:10:53 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985569.rUz1yMZt23thtowW; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:32:49 GMT; Path=/; Domain=.coursera.org
+      - __204u=1293445359-1477121569295; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:32:49 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - SZbP3pgeEea5hAr8bj1CNQ
+      - u8ip-5gpEeahzBIBejHCWw
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -11209,7 +11209,7 @@ http_interactions:
         for a 21st century leader.","photoUrl":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/91/fc8c20264e11e59638cb20cb5a23c8/banner2.png","id":"sK74dCWgEeW8-A6tkjXxWQ","slug":"leadership-21st-century","name":"Leadership
         in 21st Century Organizations"}],"paging":{"next":"800","total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:10:57 GMT
+  recorded_at: Sat, 22 Oct 2016 07:32:49 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?fields=description,photoUrl&limit=100&start=800
@@ -11233,20 +11233,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:10:58 GMT
+      - Sat, 22 Oct 2016 07:32:52 GMT
       Etag:
-      - W/"-2065992755"
+      - W/"592646829"
       Set-Cookie:
-      - CSRF3-Token=1477980658.lGCDRW9yw5i7usGo; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:10:58 GMT; Path=/; Domain=.coursera.org
-      - __204u=9086592611-1477116658207; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:10:58 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985572.NjJ1KCxwE4dIRpwr; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:32:52 GMT; Path=/; Domain=.coursera.org
+      - __204u=9324489542-1477121572510; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:32:52 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - TIwbHpgeEeac_A4d-Hux4w
+      - vbM8XJgpEeac_A4d-Hux4w
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -12577,7 +12577,7 @@ http_interactions:
         Strong Brands \n4. Communication Strategy","photoUrl":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/0d/b4c2e080cd11e6901befc1d4a2dd60/Mooc_FM_1-OK-1.png","id":"i7N8t4khEeW99gozy_2pgw","slug":"marketing-customers","name":"Marketing:
         Customer Needs and Wants"}],"paging":{"next":"900","total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:11:00 GMT
+  recorded_at: Sat, 22 Oct 2016 07:32:53 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?fields=description,photoUrl&limit=100&start=900
@@ -12601,20 +12601,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:11:01 GMT
+      - Sat, 22 Oct 2016 07:32:56 GMT
       Etag:
-      - W/"94347169"
+      - W/"53138737"
       Set-Cookie:
-      - CSRF3-Token=1477980661.3VXX3rK9bZETEyPJ; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:11:01 GMT; Path=/; Domain=.coursera.org
-      - __204u=6490277928-1477116661831; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:11:01 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985576.J1QnKPfdIfy40ooh; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:32:56 GMT; Path=/; Domain=.coursera.org
+      - __204u=2348021243-1477121576793; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:32:56 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - TrTu55geEeaolBISBVn9RQ
+      - wECd2pgpEeaVug6OTNP-Nw
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -13958,7 +13958,7 @@ http_interactions:
         reasoning to an especially important and interesting aspect of life.\",\"photoUrl\":\"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/20/29a56e9044b4ed07a9abc3140b84bf/Smokestacks_3958.jpeg\",\"name\":\"Property
         and Liability: An Introduction to Law and Economics\",\"id\":\"W-ayAiM9EeSjriIACzaDig\",\"slug\":\"property-law-and-economics\"}],\"paging\":{\"next\":\"1000\",\"total\":2261},\"linked\":{}}"
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:11:04 GMT
+  recorded_at: Sat, 22 Oct 2016 07:32:57 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?fields=description,photoUrl&limit=100&start=1000
@@ -13982,20 +13982,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:11:05 GMT
+      - Sat, 22 Oct 2016 07:33:00 GMT
       Etag:
-      - W/"1759601773"
+      - W/"-5918710"
       Set-Cookie:
-      - CSRF3-Token=1477980665.7lsLT80zlbKQS9LW; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:11:05 GMT; Path=/; Domain=.coursera.org
-      - __204u=5951525809-1477116665106; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:11:05 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985580.ZgxNmtEHODPPs59E; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:33:00 GMT; Path=/; Domain=.coursera.org
+      - __204u=4181449445-1477121580479; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:33:00 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - UKioKZgeEeaolBISBVn9RQ
+      - wnM1QJgpEeaPYwrFIo2Xcw
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -15339,7 +15339,7 @@ http_interactions:
         and other cognitive skills.","photoUrl":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/ce/ce6e703dce11e4b1518bb3518fcc93/bilingual-logo.png","name":"The
         Bilingual Brain","id":"v1-2208","slug":"bibrain"}],"paging":{"next":"1100","total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:11:09 GMT
+  recorded_at: Sat, 22 Oct 2016 07:33:01 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?fields=description,photoUrl&limit=100&start=1100
@@ -15363,20 +15363,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:11:10 GMT
+      - Sat, 22 Oct 2016 07:33:04 GMT
       Etag:
-      - W/"211991439"
+      - W/"13885764"
       Set-Cookie:
-      - CSRF3-Token=1477980670.J1P7mPdtUKvvCUkK; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:11:10 GMT; Path=/; Domain=.coursera.org
-      - __204u=7747890406-1477116670532; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:11:10 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985584.7nbpK2fTwb50YjoE; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:33:04 GMT; Path=/; Domain=.coursera.org
+      - __204u=6099002720-1477121584094; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:33:04 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - U-TAw5geEeaolBISBVn9RQ
+      - xJqpI5gpEeaYBgpPmgUorQ
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -16872,7 +16872,7 @@ http_interactions:
         of Popularity"},{"courseType":"v2.ondemand","description":"“微积分二：数列与级数”将介绍数列、无穷级数、收敛判别法和泰勒级数。本课程不仅仅满足于得到答案，而且要做到知其然，并知其所以然。","photoUrl":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/37/d1a6e9c4c9f32a3826ceaeb94dd79e/self-describing-sequence-and-harmonic-series.png","name":"微积分二:
         数列与级数 (中文版)","id":"DoehDsNaEeSFKyIACw6TQw","slug":"gaojie-wei-jifen"}],"paging":{"next":"1200","total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:11:12 GMT
+  recorded_at: Sat, 22 Oct 2016 07:33:05 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?fields=description,photoUrl&limit=100&start=1200
@@ -16896,20 +16896,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:11:13 GMT
+      - Sat, 22 Oct 2016 07:33:08 GMT
       Etag:
-      - W/"799221280"
+      - W/"196617401"
       Set-Cookie:
-      - CSRF3-Token=1477980673.ouCFpwrNOnfywp6t; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:11:13 GMT; Path=/; Domain=.coursera.org
-      - __204u=1504349101-1477116673859; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:11:13 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985588.28ftqIqAuQSeO31l; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:33:08 GMT; Path=/; Domain=.coursera.org
+      - __204u=4443879860-1477121588063; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:33:08 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - VeBCj5geEea7ewrcTyuPnQ
+      - xvhvHZgpEeaVug6OTNP-Nw
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -18508,7 +18508,7 @@ http_interactions:
         about this course using the hashtag #socinnMOOC","photoUrl":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/9b/239390357311e6a51de5ebc31d631c/SI_CourseImage_7June2016_FA-01.jpg","id":"XczDJRhBEeaUCRJWL-pjpQ","slug":"social-innovation","name":"Becoming
         a changemaker: Introduction to Social Innovation"}],"paging":{"next":"1300","total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:11:18 GMT
+  recorded_at: Sat, 22 Oct 2016 07:33:11 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?fields=description,photoUrl&limit=100&start=1300
@@ -18532,20 +18532,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:11:19 GMT
+      - Sat, 22 Oct 2016 07:33:13 GMT
       Etag:
-      - W/"1316127257"
+      - W/"543308738"
       Set-Cookie:
-      - CSRF3-Token=1477980679.zFpkciqqAXNWH6wx; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:11:19 GMT; Path=/; Domain=.coursera.org
-      - __204u=2555351966-1477116679777; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:11:19 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985593.bgqLKFEuGjuY2eJR; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:33:13 GMT; Path=/; Domain=.coursera.org
+      - __204u=4089601903-1477121593664; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:33:13 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - WWdtzpgeEea5hAr8bj1CNQ
+      - yk8UQpgpEea7ewrcTyuPnQ
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -20031,7 +20031,7 @@ http_interactions:
         visualize, design, and create generative art with Processing.","photoUrl":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/61/e7eca0352c11e494bcf927fb09cbc9/Processing2.png","name":"Introduction
         to Computational Arts: Processing","id":"v1-1322","slug":"compartsprocessing"}],"paging":{"next":"1400","total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:11:23 GMT
+  recorded_at: Sat, 22 Oct 2016 07:33:14 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?fields=description,photoUrl&limit=100&start=1400
@@ -20055,20 +20055,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:11:25 GMT
+      - Sat, 22 Oct 2016 07:33:17 GMT
       Etag:
-      - W/"-2134856803"
+      - W/"635802612"
       Set-Cookie:
-      - CSRF3-Token=1477980685.5xsn7UX7iLQoL6QH; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:11:25 GMT; Path=/; Domain=.coursera.org
-      - __204u=1573897656-1477116685013; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:11:25 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985597.kePLmKi5vqm7jZBz; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:33:17 GMT; Path=/; Domain=.coursera.org
+      - __204u=8676314912-1477121597551; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:33:17 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - XIY6BpgeEeaUlw7n-jeFZQ
+      - zKAw4ZgpEeac_A4d-Hux4w
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -21508,7 +21508,7 @@ http_interactions:
         You can see a sample site for the capstone course at http://intro-webdesign.com/","photoUrl":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/32/b88140502611e5bf374909c194f0db/introhtml_thumnail_1x1.png","id":"nQ5d7TbQEeWW9BKhJ4xW0Q","slug":"html","name":"Introduction
         to HTML5"}],"paging":{"next":"1500","total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:11:27 GMT
+  recorded_at: Sat, 22 Oct 2016 07:33:20 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?fields=description,photoUrl&limit=100&start=1500
@@ -21532,20 +21532,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:11:28 GMT
+      - Sat, 22 Oct 2016 07:33:21 GMT
       Etag:
-      - W/"-1191472210"
+      - W/"-1928209865"
       Set-Cookie:
-      - CSRF3-Token=1477980688.rJ7tZPHSkj3BZyib; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:11:28 GMT; Path=/; Domain=.coursera.org
-      - __204u=6422401238-1477116688910; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:11:28 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985601.2o4hwkPCvU2JTa39; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:33:21 GMT; Path=/; Domain=.coursera.org
+      - __204u=4311508034-1477121601912; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:33:21 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - Xtjb35geEeaYBgpPmgUorQ
+      - zzmfu5gpEea5hAr8bj1CNQ
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -22875,7 +22875,7 @@ http_interactions:
         and sub-graph patterns.","photoUrl":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/68/b9ef00533711e4a6d07f1474e53fff/Data_Mining_1.jpg","id":"qxpmIMk9EeWfkQ5lkPEvxw","slug":"data-patterns","name":"Pattern
         Discovery in Data Mining"},{"courseType":"v1.session","description":"這是一門實用的入門課程，學習者不需有工程背景。課程目標是培養製圖與讀圖的能力，同時著重理論與實務。理論方面，將教授投影、讀圖、剖面、透視、標註等基本的製圖原理，和各項工程常用的圖像語言。實作方面，將以簡單的案例，循序教授電腦輔助繪圖(CAD)的技巧。課程將設計學習小組以及實作，透過網路上的同儕互動，達到群體學習的功效。總共課程有七週，每週課程安排都包含繪圖理論觀念(4~5個講述影片)，以及電腦繪圖技巧(4~5示範影片)。","photoUrl":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/bb/e10670352b11e4aeabbf8c949e23f9/Screen-Shot-2013-08-29-at-11.55.24-AM.png","name":"工程圖學2D","id":"v1-998","slug":"graph"}],"paging":{"next":"1600","total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:11:30 GMT
+  recorded_at: Sat, 22 Oct 2016 07:33:23 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?fields=description,photoUrl&limit=100&start=1600
@@ -22899,20 +22899,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:11:32 GMT
+      - Sat, 22 Oct 2016 07:33:25 GMT
       Etag:
-      - W/"509649869"
+      - W/"1048763628"
       Set-Cookie:
-      - CSRF3-Token=1477980692.QcnM0treTU7YTWQg; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:11:32 GMT; Path=/; Domain=.coursera.org
-      - __204u=8521258985-1477116692104; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:11:32 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985605.XBpPEtIaMgDNNatT; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:33:25 GMT; Path=/; Domain=.coursera.org
+      - __204u=8072304941-1477121605141; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:33:25 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - YMBgzJgeEeac_A4d-Hux4w
+      - 0SZVQZgpEeaYBgpPmgUorQ
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -24222,7 +24222,7 @@ http_interactions:
         Cálculo o Estadística.","photoUrl":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/ed/2d66b058a211e5b1e23349627ede8c/_lgebra.v2.c_rculo.png","id":"414OIyBREeWcQw5YiljpGw","slug":"algebra-basica","name":"Álgebra
         Básica"}],"paging":{"next":"1700","total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:11:34 GMT
+  recorded_at: Sat, 22 Oct 2016 07:33:27 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?fields=description,photoUrl&limit=100&start=1700
@@ -24246,20 +24246,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:11:35 GMT
+      - Sat, 22 Oct 2016 07:33:30 GMT
       Etag:
-      - W/"-543557940"
+      - W/"-1166020151"
       Set-Cookie:
-      - CSRF3-Token=1477980695.R5E3V83mHsAtpqfd; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:11:35 GMT; Path=/; Domain=.coursera.org
-      - __204u=4663771659-1477116695358; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:11:35 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985610.6PbXoHnRmus6WicG; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:33:30 GMT; Path=/; Domain=.coursera.org
+      - __204u=6712927981-1477121610547; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:33:30 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - YrC-_pgeEea7ewrcTyuPnQ
+      - 1F8RbpgpEeaBHwomDb2Viw
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -25691,7 +25691,7 @@ http_interactions:
         modules long and is designed to be completed in four weeks.","photoUrl":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/06/734d8067a611e5a953a7b1cecd1a16/Python-Logo-2.png","id":"bfE3GBnoEeWg_RJGAuFGjw","slug":"python-programming-introduction","name":"Python
         Programming: A Concise Introduction"}],"paging":{"next":"1800","total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:11:37 GMT
+  recorded_at: Sat, 22 Oct 2016 07:33:32 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?fields=description,photoUrl&limit=100&start=1800
@@ -25715,20 +25715,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:11:39 GMT
+      - Sat, 22 Oct 2016 07:33:34 GMT
       Etag:
-      - W/"-1632256058"
+      - W/"-19718151"
       Set-Cookie:
-      - CSRF3-Token=1477980699.J9TBzdZmM863UrTb; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:11:39 GMT; Path=/; Domain=.coursera.org
-      - __204u=2956577280-1477116699032; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:11:39 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985613.rNiLR4rbfhbL8Yc6; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:33:34 GMT; Path=/; Domain=.coursera.org
+      - __204u=5408965332-1477121613988; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:33:34 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - ZOE0X5geEeac_A4d-Hux4w
+      - 1mwfdJgpEea7ewrcTyuPnQ
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -27183,7 +27183,7 @@ http_interactions:
         presents fundamental principles, described quantitatively.","photoUrl":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/d4/aa3d60565e11e6a3547938bae9c721/Jack-2.jpg","id":"FnZcU7lhEeW6YA7MjVrgzw","slug":"bioelectricity","name":"Bioelectricity:
         A Quantitative Approach"}],"paging":{"next":"1900","total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:11:42 GMT
+  recorded_at: Sat, 22 Oct 2016 07:33:35 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?fields=description,photoUrl&limit=100&start=1900
@@ -27207,20 +27207,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:11:44 GMT
+      - Sat, 22 Oct 2016 07:33:37 GMT
       Etag:
-      - W/"782440296"
+      - W/"575458435"
       Set-Cookie:
-      - CSRF3-Token=1477980704.BaEj5xajMOW5PviT; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:11:44 GMT; Path=/; Domain=.coursera.org
-      - __204u=6239073253-1477116704073; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:11:44 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985617.yKkvtC325tT4vLvo; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:33:37 GMT; Path=/; Domain=.coursera.org
+      - __204u=8287975348-1477121617536; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:33:37 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - Z-Kz25geEeaolBISBVn9RQ
+      - 2ImoMpgpEean1g69KRD03w
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -28647,7 +28647,7 @@ http_interactions:
         para el certificado.","photoUrl":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/40/2a7d30581611e69499350b054dd782/LiderazgoEfectivoCurso1Ver2Logo.jpg","id":"k0ve5unqEeWDtQ4tuIgsiw","slug":"estilos-liderazgo","name":"Estilos
         de Liderazgo: opciones para avanzar en desafíos complejos"}],"paging":{"next":"2000","total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:11:46 GMT
+  recorded_at: Sat, 22 Oct 2016 07:33:40 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?fields=description,photoUrl&limit=100&start=2000
@@ -28671,20 +28671,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:11:47 GMT
+      - Sat, 22 Oct 2016 07:33:42 GMT
       Etag:
-      - W/"-1160300649"
+      - W/"1829179360"
       Set-Cookie:
-      - CSRF3-Token=1477980707.xhD8GZLn0kce7AGX; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:11:47 GMT; Path=/; Domain=.coursera.org
-      - __204u=4174977349-1477116707652; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:11:47 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985622.ch7oqMKNjYHF9Ivz; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:33:42 GMT; Path=/; Domain=.coursera.org
+      - __204u=5860104643-1477121622355; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:33:42 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - agSpo5geEeahzBIBejHCWw
+      - 22jTPpgpEeaPYwrFIo2Xcw
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -30079,7 +30079,7 @@ http_interactions:
         Health Policy: The Structure of the American Health Care System (Part I of
         II)","id":"v1-2875","slug":"americanhealthsystem"}],"paging":{"next":"2100","total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:11:49 GMT
+  recorded_at: Sat, 22 Oct 2016 07:33:44 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?fields=description,photoUrl&limit=100&start=2100
@@ -30103,20 +30103,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:11:51 GMT
+      - Sat, 22 Oct 2016 07:33:46 GMT
       Etag:
-      - W/"-478970510"
+      - W/"-2006223635"
       Set-Cookie:
-      - CSRF3-Token=1477980711.NOQIrChaKZZBD1FG; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:11:51 GMT; Path=/; Domain=.coursera.org
-      - __204u=5393768485-1477116711106; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:11:51 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985625.qWKfL2yPe0ZKQ1mV; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:33:46 GMT; Path=/; Domain=.coursera.org
+      - __204u=1998074648-1477121625998; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:33:46 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - bBOzopgeEea0qBLvaTsEWw
+      - 3ZS0QJgpEeahzBIBejHCWw
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -31568,7 +31568,7 @@ http_interactions:
         Watch a preview of the course here: https://uofa.ualberta.ca/courses/paleontology-marine-reptiles","photoUrl":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-course-photos.s3.amazonaws.com/9b/00a2c08e3111e5b28811922f40f051/MR-Lesson-4-Lo-Rez-Final.jpg","id":"jnQnC3Q6EeWLqw7zlLhRzQ","slug":"ancient-marine-reptiles","name":"Paleontology:
         Ancient Marine Reptiles"}],"paging":{"next":"2200","total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:11:53 GMT
+  recorded_at: Sat, 22 Oct 2016 07:33:49 GMT
 - request:
     method: get
     uri: https://api.coursera.org/api/courses.v1?fields=description,photoUrl&limit=100&start=2200
@@ -31592,20 +31592,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sat, 22 Oct 2016 06:11:55 GMT
+      - Sat, 22 Oct 2016 07:33:51 GMT
       Etag:
-      - W/"-1446898119"
+      - W/"2134301707"
       Set-Cookie:
-      - CSRF3-Token=1477980714.yAoPxcRgdfaeolCw; Max-Age=864000; Expires=Tue, 01 Nov
-        2016 06:11:55 GMT; Path=/; Domain=.coursera.org
-      - __204u=4180222125-1477116714994; Max-Age=31536000; Expires=Sun, 22 Oct 2017
-        06:11:55 GMT; Path=/; Domain=.coursera.org
+      - CSRF3-Token=1477985631.kIAFs3QbWNqfuqdt; Max-Age=864000; Expires=Tue, 01 Nov
+        2016 07:33:51 GMT; Path=/; Domain=.coursera.org
+      - __204u=8121461221-1477121631066; Max-Age=31536000; Expires=Sun, 22 Oct 2017
+        07:33:51 GMT; Path=/; Domain=.coursera.org
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
       - nosniff
       X-Coursera-Request-Id:
-      - bmT24pgeEea0qBLvaTsEWw
+      - 4JorvpgpEeaUlw7n-jeFZQ
       X-Frame-Options:
       - SAMEORIGIN
       X-Xss-Protection:
@@ -32364,5 +32364,5 @@ http_interactions:
         @JFKclass.","photoUrl":"https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d15cw65ipctsrr.cloudfront.net/80/49c970352c11e4a20a15dee8e65a23/JFK-Titile-Page-with-words.png","id":"lf2q-R6UEeSzvSIAC0KYCQ","slug":"kennedy","name":"The
         Kennedy Half Century"}],"paging":{"total":2261},"linked":{}}'
     http_version: 
-  recorded_at: Sat, 22 Oct 2016 06:11:56 GMT
+  recorded_at: Sat, 22 Oct 2016 07:33:51 GMT
 recorded_with: VCR 3.0.3

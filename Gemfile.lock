@@ -32,6 +32,7 @@ GEM
     minitest-rg (5.2.0)
       minitest (~> 5.0)
     path_expander (1.0.0)
+    rake (11.2.2)
     ruby_parser (3.8.2)
       sexp_processor (~> 4.1)
     safe_yaml (1.0.4)
@@ -59,6 +60,7 @@ DEPENDENCIES
   http
   minitest
   minitest-rg
+  rake
   simplecov
   vcr
   webmock
