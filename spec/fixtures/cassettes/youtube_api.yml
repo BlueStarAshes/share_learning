@@ -1,0 +1,230 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?key=<API_KEY>&maxResults=5&order=relevance&part=snippet&q=machine%20learning&type=playlist
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/2.0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Expires:
+      - Sun, 23 Oct 2016 14:16:01 GMT
+      Date:
+      - Sun, 23 Oct 2016 14:16:01 GMT
+      Cache-Control:
+      - private, max-age=120, must-revalidate, no-transform
+      Etag:
+      - '"I_8xdZu766_FSaexEaDXTIfEWc0/w-I5q7S7exYSNGzPuIfiiwxu-To"'
+      Vary:
+      - Origin
+      - X-Origin
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '5108'
+      Server:
+      - GSE
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="36,35,34,33,32"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+         "kind": "youtube#searchListResponse",
+         "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/w-I5q7S7exYSNGzPuIfiiwxu-To\"",
+         "nextPageToken": "CAUQAA",
+         "regionCode": "TW",
+         "pageInfo": {
+          "totalResults": 88875,
+          "resultsPerPage": 5
+         },
+         "items": [
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/DphVvQ0i280482q-Hm20m9Cs16A\"",
+           "id": {
+            "kind": "youtube#playlist",
+            "playlistId": "PLA89DCFA6ADACE599"
+           },
+           "snippet": {
+            "publishedAt": "2008-07-17T22:34:50.000Z",
+            "channelId": "UC-EnprmCZ3OXyAoG7vjVNCA",
+            "title": "Lecture Collection | Machine Learning",
+            "description": "This course (CS229) -- taught by Professor Andrew Ng -- provides a broad introduction to machine learning and statistical pattern recognition. Topics include ...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/UzxYlbK2c7E/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/UzxYlbK2c7E/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/UzxYlbK2c7E/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Stanford",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/UYcryoUPrnFVNtAR84AiOTifCXE\"",
+           "id": {
+            "kind": "youtube#playlist",
+            "playlistId": "PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v"
+           },
+           "snippet": {
+            "publishedAt": "2016-04-11T00:18:02.000Z",
+            "channelId": "UCfzlCWGWYyIQ0aLC5w48gBQ",
+            "title": "Machine Learning with Python",
+            "description": "",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/OGxgnH8y2NM/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/OGxgnH8y2NM/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/OGxgnH8y2NM/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "sentdex",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/q_pzHKHuPLqZcgv-xJGiwk8IaFo\"",
+           "id": {
+            "kind": "youtube#playlist",
+            "playlistId": "PLD63A284B7615313A"
+           },
+           "snippet": {
+            "publishedAt": "2012-04-09T19:34:17.000Z",
+            "channelId": "UClGTZDyz3CSl92TgDqIr0nw",
+            "title": "Machine Learning Course - CS 156",
+            "description": "This is an introductory course by Caltech Professor Yaser Abu-Mostafa on machine learning that covers the basic theory, algorithms, and applications. Machine ...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/mbyG85GZ0PI/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/mbyG85GZ0PI/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/mbyG85GZ0PI/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "caltech",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/X6VpHqfA7n-Pkx-UokyV-NiSSXM\"",
+           "id": {
+            "kind": "youtube#playlist",
+            "playlistId": "PLAwxTw4SYaPkQXg8TkVdIvYv4HfLG7SiH"
+           },
+           "snippet": {
+            "publishedAt": "2015-03-17T07:41:45.000Z",
+            "channelId": "UCBVCi5JbYmfG3q5MEuoWdOw",
+            "title": "Intro to Machine Learning",
+            "description": "These videos are part of an online course, Intro to Machine Learning. Check out the course here: https://www.udacity.com/course/ud120. This course was ...",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/ICKBWIkfeJ8/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/ICKBWIkfeJ8/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/ICKBWIkfeJ8/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Udacity",
+            "liveBroadcastContent": "none"
+           }
+          },
+          {
+           "kind": "youtube#searchResult",
+           "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/_ysKICHkpJzIb_g15xOJ3LXDZG4\"",
+           "id": {
+            "kind": "youtube#playlist",
+            "playlistId": "PLZ9qNFMHZ-A4rycgrgOYma6zxF4BZGGPW"
+           },
+           "snippet": {
+            "publishedAt": "2014-12-15T17:25:26.000Z",
+            "channelId": "UCAkzrVPNbgm7rv-DNr14q1Q",
+            "title": "Machine learning coursera",
+            "description": "",
+            "thumbnails": {
+             "default": {
+              "url": "https://i.ytimg.com/vi/qeHZOdmJvFU/default.jpg",
+              "width": 120,
+              "height": 90
+             },
+             "medium": {
+              "url": "https://i.ytimg.com/vi/qeHZOdmJvFU/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+             },
+             "high": {
+              "url": "https://i.ytimg.com/vi/qeHZOdmJvFU/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+             }
+            },
+            "channelTitle": "Alireza Saberi",
+            "liveBroadcastContent": "none"
+           }
+          }
+         ]
+        }
+    http_version: 
+  recorded_at: Sun, 23 Oct 2016 14:16:01 GMT
+recorded_with: VCR 3.0.3
