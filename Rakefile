@@ -1,8 +1,18 @@
 require 'rake/testtask'
 
-desc 'run tests'
-task :spec do
-	sh 'ruby spec/udacity_api_spec.rb spec/coursera_api_spec.rb'
+namespace :tests do
+	desc 'run all tests'
+	task all: [:spec_udacity, :spec_coursera]
+
+	task :spec_udacity do
+		sh 'ruby spec/udacity_api_spec.rb'
+		puts "\n\n"
+	end
+
+	task :spec_coursera do
+		sh 'ruby spec/coursera_api_spec.rb'
+		puts "\n\n"
+	end
 end
 
 desc 'delete cassette fixtures'
