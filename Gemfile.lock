@@ -42,6 +42,7 @@ GEM
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.0)
+    trollop (2.1.2)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.2)
@@ -62,6 +63,7 @@ DEPENDENCIES
   minitest-rg
   rake
   simplecov
+  trollop (~> 2.1)
   vcr
   webmock
 

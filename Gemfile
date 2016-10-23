@@ -11,3 +11,4 @@ gem 'simplecov'
 
 gem 'flog'
 gem 'flay'
+gem 'trollop', '~> 2.1'
