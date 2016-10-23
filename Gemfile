@@ -7,9 +7,11 @@ gem 'minitest-rg'
 gem 'rake'
 gem 'vcr'
 gem 'webmock'
+
 gem 'simplecov'
 
 gem 'flog'
 gem 'flay'
 gem 'rubocop'
-gem 'trollop', '~> 2.1'
+
+
