@@ -46,15 +46,16 @@ module Coursera
       parsed_courses = {}
       count = course_start_num
       retrieved_batch[:courses].each do |course|
-        parsed_courses[count] = {}
-        parsed_courses[count][:course_type] = course['courseType']
-        parsed_courses[count][:course_id] = course['id']
-        parsed_courses[count][:course_slug] = course['slug']
-        parsed_courses[count][:course_name] = course['name']
-        parsed_courses[count][:link] =
+        parsed_course = {}
+        parsed_course[:course_type] = course['courseType']
+        parsed_course[:course_id] = course['id']
+        parsed_course[:course_slug] = course['slug']
+        parsed_course[:course_name] = course['name']
+        parsed_course[:link] =
           COURSERA_COURSE_LINK_BASE + course['slug']
-        parsed_courses[count][:description] = course['description']
-        parsed_courses[count][:photo_url] = course['photoUrl']
+        parsed_course[:description] = course['description']
+        parsed_course[:photo_url] = course['photoUrl']
+        parsed_courses[count] = parsed_course
         count += 1
       end
       parsed_courses
