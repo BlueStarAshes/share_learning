@@ -10,7 +10,7 @@ require 'webmock'
 
 require_relative '../lib/youtube_playlist'
 
-FIXTURES_FOLDER = 'spec/fixtures'
+FIXTURES_FOLDER = 'fixtures'
 CASSETTES_FOLDER = "#{FIXTURES_FOLDER}/cassettes"
 CASSETTE_FILE = 'youtube_api'
 
