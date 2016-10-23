@@ -1,6 +1,10 @@
-# frozen_string_literal: true
-# A sample Gemfile
-source "https://rubygems.org"
-gem 'google-api-client', '<0.9'
-# gem "rails"
-gem 'trollop', '~> 2.1'
+source 'https://rubygems.org'
+
+gem 'http'
+
+gem 'minitest'
+gem 'minitest-rg'
+gem 'rake'
+gem 'vcr'
+gem 'webmock'
+gem 'simplecov'

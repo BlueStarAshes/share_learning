@@ -1,4 +1,4 @@
-require_relative 'spec_helper.rb'
+require_relative 'youtube_api_spec_helper.rb'
 
 describe 'YouTube API' do
   VCR.configure do |c|
