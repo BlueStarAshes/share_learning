@@ -67,9 +67,9 @@ module Udacity
       end
     end
 
-    def self.find(udacity_api)
-      course_data = udacity_api.acquire_json_response
-      new(udacity_api, course_data)
+    def self.find()
+      course_data = UdacityAPI.acquire_json_response
+      new(UdacityAPI, course_data)
     end
   end
 end

@@ -22,31 +22,31 @@ describe 'Udacity course' do
   end
 
   it 'should get all courses successfully' do
-    udacity = Udacity::UdacityCourse.find(@udacity_api)
+    udacity = Udacity::UdacityCourse.find()
     all_courses = udacity.acquire_all_courses
     all_courses.nil?.must_equal false
   end
 
   it 'should get course by id successfully' do
-    udacity = Udacity::UdacityCourse.find(@udacity_api)
+    udacity = Udacity::UdacityCourse.find()
     course = udacity.acquire_course_by_id('cs101')
     course.must_equal ( UDACITY_RESULT[:get_course_by_id] )
   end
 
   it 'should get course by title successfully' do
-    udacity = Udacity::UdacityCourse.find(@udacity_api)
+    udacity = Udacity::UdacityCourse.find()
     course = udacity.acquire_course_by_title('Intro to Java Programming')
     course.must_equal ( UDACITY_RESULT[:get_course_by_title] )   
   end
 
   it 'should get courses by level successfully' do
-    udacity = Udacity::UdacityCourse.find(@udacity_api)
+    udacity = Udacity::UdacityCourse.find()
     course = udacity.acquire_courses_by_level('beginner')
     course.nil?.must_equal false
   end
 
   it 'should get courses by tracks successfully' do
-    udacity = Udacity::UdacityCourse.find(@udacity_api)
+    udacity = Udacity::UdacityCourse.find()
     course = udacity.acquire_courses_by_tracks('Data Science')
     course.nil?.must_equal false
   end
