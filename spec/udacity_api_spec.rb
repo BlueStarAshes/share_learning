@@ -1,4 +1,4 @@
-require_relative 'spec_helper.rb'
+require_relative 'udacity_api_spec_helper.rb'
 
 describe 'Udacity course' do
   VCR.configure do |c|
@@ -9,7 +9,7 @@ describe 'Udacity course' do
   before do
     VCR.insert_cassette CASSETTE_FILE, record: :new_episodes
 
-    @udacity_api = Udacity::UdacityAPI.new
+    @udacity_api = Udacity::UdacityAPI
   end
 
   after do
@@ -17,7 +17,7 @@ describe 'Udacity course' do
   end
 
   it 'should get json response successfully' do
-    udacity = Udacity::UdacityAPI.new.acquire_json_response
+    udacity = Udacity::UdacityAPI.acquire_json_response
     udacity.nil?.must_equal false
   end
 
