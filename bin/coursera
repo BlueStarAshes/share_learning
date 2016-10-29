@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), *%w(.. lib))
+require 'Share_learning'
+
+def command_valid?(query)
+  %w(title type description).include?(query)
+end
+
+def help
+  puts 'USAGE: coursera [command] [arguments]'\
+       '[command] now includes [title], [type], [description].'\
+       "[title] helps you search courses on Coursea with titles'\
+       ' containing the keyword you give.\n"\
+       "[type] helps you search courses on Coursea with the type'\
+       ' containing the keyword you give.\n"\
+       "[description] helps you search courses on Coursea with the type'\
+       ' containing the keyword you give.\n"
+end
+
+command = ARGV[0]
+
+unless command_valid?(command)
+  help
+  exit(1)
+end
