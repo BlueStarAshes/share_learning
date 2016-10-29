@@ -12,7 +12,7 @@ module Coursera
 
     def self.find
       total_course_num = CourseraApi.total_course_num
-      courses = CourseraApi.retrieve_all_courses
+      courses = CourseraApi.courses
       new(total_course_num, courses)
     end
 
@@ -23,18 +23,18 @@ module Coursera
       end
     end
 
-    private_class_method
-
     def print_course(course, sequence_number)
-      puts "Course #{sequence_number}:"\
-           "\tTitle: #{course[:course_name]}"\
-           "\tType: #{course[:course_type]}"\
-           "\tID: #{course[:course_id]}"\
-           "\tSlug: #{course[:course_slug]}"\
-           "\tLink: #{course[:link]}"\
-           "\tDescription: #{course[:description]}"\
-           "\tPhoto URL: #{course[:photo_url]}"\
+      puts "Course #{sequence_number}:\n"\
+           "\tTitle: #{course[:course_name]}\n"\
+           "\tType: #{course[:course_type]}\n"\
+           "\tID: #{course[:course_id]}\n"\
+           "\tSlug: #{course[:course_slug]}\n"\
+           "\tLink: #{course[:link]}\n"\
+           "\tDescription: #{course[:description][0..100]}...\n"\
+           "\tPhoto URL: #{course[:photo_url]}\n"\
            "\n"
     end
+
+    private :print_course
   end
 end
