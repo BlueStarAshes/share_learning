@@ -1,0 +1,74 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), *%w(.. lib))
+require 'Share_learning'
+
+def command_valid?(query)
+  %w(title description).include?(query)
+end
+
+def help
+  puts "USAGE: coursera [command] [keyword]\n\n"\
+       "[command] now includes [title], [description].\n"\
+       " - \n"\
+       " - [title]\t\t"\
+       'helps you search courses on Coursea with titles'\
+       " containing the [keyword] you give.\n"\
+       " - \n"\
+       " - [description]\t"\
+       'helps you search courses on Coursea with descriptions '\
+       "containing the [keyword] you give.\n"
+end
+
+def reject
+  help
+  exit(1)
+end
+
+def require_courses
+  puts 'Requiring courses from Coursera...'
+  courses = Coursera::CourseraCourses.find.courses
+  puts '...Courses required'
+  courses
+end
+
+def show_course(course, sequence_number)
+  puts "Course #{sequence_number}:\n"\
+       "\tTitle: #{course[:course_name]}\n"\
+       "\tType: #{course[:course_type]}\n"\
+       "\tSlug: #{course[:course_slug]}\n"\
+       "\tLink: #{course[:link]}\n"\
+       "\n"
+end
+
+def search_courses_by_title(search_method, keyword)
+  courses = require_courses
+  count = 0
+  courses.size.times do |i|
+    course = courses[i]
+    # puts course[:course_name].downcase
+    if course[search_method].downcase.include?(keyword)
+      count += 1
+      show_course(course, count)
+    end
+  end
+  puts "Total: #{count}"
+end
+
+def execute_command(command, keyword)
+  case command
+  when 'title'
+    search_method = :course_name
+  when 'description'
+    search_method = :description
+  end
+  reject unless keyword
+  search_courses_by_title(search_method, keyword)
+end
+
+command = ARGV[0]
+keyword = ARGV[1]
+keyword = keyword.downcase if keyword
+
+reject unless command_valid?(command)
+
+execute_command(command, keyword)
