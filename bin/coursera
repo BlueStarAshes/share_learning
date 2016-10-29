@@ -19,6 +19,11 @@ def help
        "containing the [keyword] you give.\n"
 end
 
+def reject
+  help
+  exit(1)
+end
+
 def require_courses
   puts 'Requiring courses from Coursera...'
   courses = Coursera::CourseraCourses.find.courses
@@ -56,15 +61,14 @@ def execute_command(command, keyword)
   when 'description'
     search_method = :description
   end
+  reject unless keyword
   search_courses_by_title(search_method, keyword)
 end
 
 command = ARGV[0]
-keyword = ARGV[1].downcase
+keyword = ARGV[1]
+keyword = keyword.downcase if keyword
 
-unless command_valid?(command)
-  help
-  exit(1)
-end
+reject unless command_valid?(command)
 
 execute_command(command, keyword)
