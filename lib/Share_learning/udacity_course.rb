@@ -47,25 +47,25 @@ module Udacity
       end
     end
 
-    # get courses by skill levels ('', 'beginner', 'intermediate', 'advanced')
-    def acquire_courses_by_level(level)
-      course_array = []
-      @json_response['courses'].each do |course|
-        next unless course['level'] == level
-        h = create_hash(course['title'], course['summary'], \
-                        course['homepage'], course['image'])
-        course_array.push(h)
-      end
-      course_array
-    end
+    # # get courses by skill levels ('', 'beginner', 'intermediate', 'advanced')
+    # def acquire_courses_by_level(level)
+    #   course_array = []
+    #   @json_response['courses'].each do |course|
+    #     next unless course['level'] == level
+    #     h = create_hash(course['title'], course['summary'], \
+    #                     course['homepage'], course['image'])
+    #     course_array.push(h)
+    #   end
+    #   course_array
+    # end
 
-    # get courses by tracks (return a list of course id)
-    def acquire_courses_by_tracks(track_name)
-      @json_response['tracks'].each do |track|
-        next unless track['name'] == track_name
-        return track['courses'].inspect
-      end
-    end
+    # # get courses by tracks (return a list of course id)
+    # def acquire_courses_by_tracks(track_name)
+    #   @json_response['tracks'].each do |track|
+    #     next unless track['name'] == track_name
+    #     return track['courses'].inspect
+    #   end
+    # end
 
     def self.find()
       course_data = UdacityAPI.acquire_json_response
