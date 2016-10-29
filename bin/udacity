@@ -1,0 +1,66 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), *%w(.. lib))
+require 'Share_learning'
+
+def show(course)
+  puts 'title: ' + course[:title]
+  puts 'introduction: ' + course[:intro]
+  puts 'link: ' + course[:link]
+end
+
+def help
+  puts 'USAGE: udacity [command]'
+  puts 'command: '
+  puts "  - all: show all the courses information in Udacity"
+  puts "  - id: search for a course by course id"
+  puts "  - title: search for a course by course title"  
+end
+
+def check_command_available(command)
+  case command
+  when 'help', 'all', 'id', 'title'
+  else
+    puts 'USAGE: udacity [help] [all] [id course_id] [title course_title]' 
+    puts "Use 'udacity help' to see more information."
+    exit(1)
+  end
+end
+
+def check_feature_available(command, feature)
+  case command
+  when 'id'
+    unless feature
+      puts 'USAGE: udacity id [course_id]'
+      exit(1)
+    end    	
+  when 'title'
+    unless feature
+      puts 'USAGE: udacity title [course_title]'
+      exit(1)
+    end  
+  end
+end
+
+def action(command, feature=nil)
+  case command
+  when 'help'
+  	help
+  when 'all'
+    course = Udacity::UdacityCourse.find().acquire_all_courses
+    show(course)
+  when 'id'
+    check_feature_available('id', feature)
+    course = Udacity::UdacityCourse.find().acquire_course_by_id(feature)
+    show(course)
+  when 'title'
+    check_feature_available('title', feature)
+    course = Udacity::UdacityCourse.find().acquire_course_by_title(feature)
+    show(course)
+  end
+end
+
+command = ARGV[0]
+feature = ARGV[1]
+check_command_available(command)
+action(command, feature)

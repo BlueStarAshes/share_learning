@@ -1,4 +1,4 @@
-require_relative '../lib/youtube_api'
+require_relative 'youtube_api'
 
 module YouTube
   # Playlist on Youtube

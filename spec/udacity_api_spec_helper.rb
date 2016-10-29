@@ -8,8 +8,8 @@ require 'yaml'
 require 'vcr'
 require 'webmock'
 
-require_relative '../lib/udacity_api.rb'
-require_relative '../lib/udacity_course.rb'
+require_relative '../lib/Share_learning/udacity_api.rb'
+require_relative '../lib/Share_learning/udacity_course.rb'
 
 FIXTURES_FOLDER = 'spec/fixtures'
 CASSETTES_FOLDER = "#{FIXTURES_FOLDER}/cassettes"
