@@ -3,7 +3,7 @@ $LOAD_PATH.push File.expand_path('../lib', __FILE__)
 require 'Share_learning/udacity_version'
 
 Gem::Specification.new do |s|
-  s.name        =  'Udacity'
+  s.name        =  'udacity'
   s.version     =  Udacity::VERSION
 
   s.summary     =  'Gets courses from Udacity'
