@@ -8,14 +8,19 @@ module Coursera
     COURSERA_COURSE_LINK_BASE = 'https://www.coursera.org/learn/'.freeze
     BATCH_SIZE = 100
 
-    attr_reader :total_course_num, :courses
-
-    def initialize
+    def self.total_course_num
+      @total_course_num = retrieve_total_course_num
     end
 
-    def retrieve_total_course_num
-      # Create an API response dump
-      coursera_response = {}
+    def self.courses
+      return @courses if @courses
+      @courses = retrieve_all_courses
+    end
+
+    private_class_method
+
+    def self.retrieve_total_course_num
+      return @total_course_num if @total_course_num
       # Retrieve the total number of courses on the catlog
       course_start_num = 0
       course_num_limit = 0
@@ -23,67 +28,77 @@ module Coursera
         HTTP.get(COURSERA_CATOLOG_API_URL,
                  params: { start: course_start_num,
                            limit: course_num_limit })
-      body_str = query_response.body.to_s
-      coursera_response[:paging] = JSON.parse(body_str)['paging']
-      coursera_response[:paging]['total']
+      JSON.parse(query_response.body.to_s)['paging']['total']
     end
 
-    def query_a_batch_of_courses(course_start_num, course_num_limit)
+    def self.retrieve_all_courses
+      # Create an dump for retrieved courses
+      retrieved_courses = {}
+      # Set the relating numbers
+      batch_start = 0
+      # Retrieve courses batch by batch
+      number_of_batches.times do
+        # Jump out the loop if we know there is not any courses left
+        break if batch_start >= @total_course_num
+
+        retrieved_courses = new_batch_merged(retrieved_courses, batch_start)
+        # Increase the course number to start with next batch
+        batch_start += BATCH_SIZE
+      end
+      retrieved_courses
+    end
+
+    def self.number_of_batches
+      result = retrieve_total_course_num / BATCH_SIZE
+      result += 1 unless (@total_course_num % BATCH_SIZE).zero?
+      result
+    end
+
+    def self.new_batch_merged(retrieved_courses, course_start)
+      # Use the API to get courses response on Coursera
+      retrieved_batch =
+        query_a_batch_of_courses(course_start)
+      # Parse the response to get the desired courses data
+      parsed_batch = parse_batch_result(course_start, retrieved_batch)
+      # Merge the parsed batch of courses
+      retrieved_courses.merge(parsed_batch)
+    end
+
+    def self.query_a_batch_of_courses(course_start)
       # Create an API response dump
       retrieved_batch = {}
       query_response =
         HTTP.get(COURSERA_CATOLOG_API_URL,
-                 params: { start: course_start_num,
-                           limit: course_num_limit,
+                 params: { start: course_start,
+                           limit: BATCH_SIZE,
                            fields: 'description,photoUrl' })
       body_str = query_response.body.to_s
       retrieved_batch[:courses] = JSON.parse(body_str)['elements']
       retrieved_batch
     end
 
-    def parse_batch_result(course_start_num, retrieved_batch)
+    def self.parse_batch_result(course_start, retrieved_batch)
       # Create an parsed dump
       parsed_courses = {}
-      count = course_start_num
+      count = course_start
       retrieved_batch[:courses].each do |course|
-        parsed_course = {}
-        parsed_course[:course_type] = course['courseType']
-        parsed_course[:course_id] = course['id']
-        parsed_course[:course_slug] = course['slug']
-        parsed_course[:course_name] = course['name']
-        parsed_course[:link] =
-          COURSERA_COURSE_LINK_BASE + course['slug']
-        parsed_course[:description] = course['description']
-        parsed_course[:photo_url] = course['photoUrl']
-        parsed_courses[count] = parsed_course
+        parsed_courses[count] = parse_course(course)
         count += 1
       end
       parsed_courses
     end
 
-    def retrieve_all_courses
-      # Create an dump for retrieved courses
-      retrieved_courses = {}
-      # Set the relating numbers
-      course_start_num = 0
-      course_num_limit = 100
-      total_course_num = retrieve_total_course_num
-      number_of_batches = total_course_num / BATCH_SIZE
-      number_of_batches += 1 unless (total_course_num % BATCH_SIZE).zero?
-      # Retrieve courses batch by batch
-      number_of_batches.times do
-        # Jump out the loop if we know there is not any courses left
-        break if course_start_num >= total_course_num
-        # Use the API to get courses response on Coursera
-        retrieved_batch =
-          query_a_batch_of_courses(course_start_num, course_num_limit)
-        # Parse the response to get the desired courses data
-        retrieved_courses =
-          retrieved_courses.merge(parse_batch_result(course_start_num, retrieved_batch))
-        # Increase the course number to start with next batch
-        course_start_num += BATCH_SIZE
-      end
-      retrieved_courses
+    def self.parse_course(course)
+      parsed_course = {}
+      parsed_course[:course_type] = course['courseType']
+      parsed_course[:course_id] = course['id']
+      parsed_course[:course_slug] = course['slug']
+      parsed_course[:course_name] = course['name']
+      parsed_course[:link] =
+        COURSERA_COURSE_LINK_BASE + course['slug']
+      parsed_course[:description] = course['description']
+      parsed_course[:photo_url] = course['photoUrl']
+      parsed_course
     end
   end
 end
