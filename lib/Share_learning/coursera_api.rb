@@ -17,8 +17,6 @@ module Coursera
       @courses = retrieve_all_courses
     end
 
-    private_class_method
-
     def self.retrieve_total_course_num
       return @total_course_num if @total_course_num
       # Retrieve the total number of courses on the catlog
@@ -100,5 +98,13 @@ module Coursera
       parsed_course[:photo_url] = course['photoUrl']
       parsed_course
     end
+
+    private_class_method :retrieve_total_course_num
+    private_class_method :retrieve_all_courses
+    private_class_method :number_of_batches
+    private_class_method :new_batch_merged
+    private_class_method :query_a_batch_of_courses
+    private_class_method :parse_batch_result
+    private_class_method :parse_course
   end
 end
