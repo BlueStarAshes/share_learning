@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), *%w(.. lib))
+require 'share_learning'
+
+keyword = ARGV[0] || ENV['KEYWORD']
+unless keyword
+  puts 'USAGE: share_learning [keyword]'
+  exit(1)
+end
+
+playlist_data = YouTube::YouTubePlaylist.find(keyword: keyword)
+
+playlist_data.results.each.with_index do |playlist, index|
+  print "#{index + 1}. "
+  puts "Playlist on YouTube: #{playlist['title']}"
+  puts "Description: #{playlist['description']}"
+  puts "Image: #{playlist['image']}"
+  puts "URL: #{playlist['url']}"
+  puts
+end
