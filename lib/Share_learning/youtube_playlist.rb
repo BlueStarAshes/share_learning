@@ -1,23 +1,33 @@
-require_relative 'youtube_api'
+require_relative 'youtube_api' 
 
 module YouTube
   # Playlist on Youtube
   class YouTubePlaylist
-    attr_reader :playlists
-    def initialize(youtube_api)
-      @youtube_api = youtube_api
-      @playlists = @youtube_api.get_playlist
+    attr_reader :results
+
+    def initialize(data: nil)
+      @results = load_data(data)
     end
 
-    def print_playlist_info
-      youtube_res = @playlists
-      youtube_res.each do |playlist|
-        puts "Course: #{playlist['title']}"
-        puts "Description: #{playlist['description']}"
-        puts "imaage: #{playlist['image']}"
-        puts "URL: #{playlist['url']}"
-        puts
+    def self.find(keyword:)
+      playlists = YouTube::YouTubeAPI.get_playlist(keyword)
+      new(data: playlists)
+    end
+
+    private
+
+    # Get information of playlists 
+    def load_data(playlists)
+      results = []
+      playlists['items'].each do |playlist|
+        title = playlist['snippet']['title']
+        des = playlist['snippet']['description']
+        image = playlist['snippet']['thumbnails']['high']['url']
+        playlistId = playlist['id']['playlistId']
+        url = 'https://www.youtube.com/channel/' + playlistId
+        results.push({'title' => title, 'description' => des, 'image' => image, 'url' => url})
       end
+      results
     end
   end
 end
