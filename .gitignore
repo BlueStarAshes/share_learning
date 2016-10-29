@@ -6,3 +6,4 @@ spec/data/.DS_Store
 coverage/
 spec/fixtures/
 Gemfile.lock
+*.gem
