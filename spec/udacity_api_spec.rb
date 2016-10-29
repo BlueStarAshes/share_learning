@@ -39,15 +39,15 @@ describe 'Udacity course' do
     course.must_equal ( UDACITY_RESULT[:get_course_by_title] )   
   end
 
-  it 'should get courses by level successfully' do
-    udacity = Udacity::UdacityCourse.find()
-    course = udacity.acquire_courses_by_level('beginner')
-    course.nil?.must_equal false
-  end
+  # it 'should get courses by level successfully' do
+  #   udacity = Udacity::UdacityCourse.find()
+  #   course = udacity.acquire_courses_by_level('beginner')
+  #   course.nil?.must_equal false
+  # end
 
-  it 'should get courses by tracks successfully' do
-    udacity = Udacity::UdacityCourse.find()
-    course = udacity.acquire_courses_by_tracks('Data Science')
-    course.nil?.must_equal false
-  end
+  # it 'should get courses by tracks successfully' do
+  #   udacity = Udacity::UdacityCourse.find()
+  #   course = udacity.acquire_courses_by_tracks('Data Science')
+  #   course.nil?.must_equal false
+  # end
 end
