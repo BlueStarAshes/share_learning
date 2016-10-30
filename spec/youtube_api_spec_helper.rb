@@ -8,8 +8,8 @@ require 'json'
 require 'vcr'
 require 'webmock'
 
-require_relative '../lib/share_learning/youtube_api.rb'
-require_relative '../lib/share_learning/youtube_playlist.rb'
+require_relative '../lib/Share_learning/youtube_api.rb'
+require_relative '../lib/Share_learning/youtube_playlist.rb'
 
 FIXTURES_FOLDER = 'spec/fixtures'.freeze
 CASSETTES_FOLDER = '#{FIXTURES_FOLDER}/cassettes'.freeze
