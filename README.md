@@ -62,8 +62,6 @@ courses.size.times do |i|
 end
 ```
 
-<br><br>
-
 ### Udacity
 Udacity application allows you to get the information includes title, introduction, link to the homepage and the image of the course. There are two ways to use the Udacity application:
 #### Command line
@@ -117,18 +115,18 @@ get_course_by_id = courses.acquire_course_by_title(course_title)
     * `[keyword]` - helps you search and get information of playlists on YouTube.
 
 #### In your project
-* `require 'Share_learning'`
-See the following example code for more usage details:
-    ```ruby
-    # Access playlists data 
-    playlist_data = YouTube::YouTubePlaylist.find(keyword: 'keyword')
-    playlist_data.results.each.with_index do |playlist, index|
-      print "#{index + 1}. "
-      puts "Playlist on YouTube: #{playlist['title']}"
-      puts "Description: #{playlist['description']}"
-      puts "Image: #{playlist['image']}"
-      puts "URL: #{playlist['url']}"
-      puts
-    end
-    ```
+* `require 'Share_learning'`     
+See the following example code for more usage details:     
+```ruby
+# Access playlists data 
+playlist_data = YouTube::YouTubePlaylist.find(keyword: 'keyword')
+playlist_data.results.each.with_index do |playlist, index|
+  print "#{index + 1}. "
+  puts "Playlist on YouTube: #{playlist['title']}"
+  puts "Description: #{playlist['description']}"
+  puts "Image: #{playlist['image']}"
+  puts "URL: #{playlist['url']}"
+  puts
+end
+```
 
