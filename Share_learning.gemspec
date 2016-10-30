@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 $LOAD_PATH.push File.expand_path('../lib', __FILE__)
-require 'Share_learning/coursera_version'
+require 'Share_learning/share_learning_version'
 
 Gem::Specification.new do |s|
-  s.name        =  'coursera'
+  s.name        =  'Share_learning'
   s.version     =  ShareLearning::VERSION
 
-  s.summary     =  'Gets courses from Coursera'
+  s.summary     =  'Gets learning resource from Coursera, Udacity, and Youtube.'
   s.description =  'Extracts course\'s titles, descriptions, images and links '\
                    'from Coursera and Udacity. '\
                    'And searches relating resource on Youtube.'
@@ -15,9 +15,7 @@ Gem::Specification.new do |s|
 
   s.files       =  `git ls-files`.split("\n")
   s.test_files  =  `git ls-files -- spec/*`.split("\n")
-  s.executables << `git ls-files -- bin/*`.split("\n").map do |f|
-    File.basename(f)
-  end
+  s.executables << 'udacity' << 'coursera' << 'youtube'
 
   s.add_runtime_dependency 'http', '~> 2.0'
 
