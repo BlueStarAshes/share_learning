@@ -18,5 +18,4 @@ CASSETTE_FILE = 'youtube_api'.freeze
 if File.file?('../config/credentials.yml')
   credentials = YAML.load(File.read('../config/credentials.yml'))
   ENV['YOUTUBE_API_KEY'] = credentials[:api_key]
-  print ENV['YOUTUBE_API_KEY'],123
 end
