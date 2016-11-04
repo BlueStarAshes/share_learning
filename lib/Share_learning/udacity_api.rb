@@ -5,7 +5,7 @@ module Udacity
   # Service for all Udacity API calls
   class UdacityAPI
     UDACITY_URL = 'https://www.udacity.com/public-api/v0/courses'.freeze
-    
+
     # get all courses info in json format through RESTful API
     def self.acquire_json_response
       response = HTTP.get(URI.parse(UDACITY_URL))
@@ -19,11 +19,11 @@ module Udacity
 
     def self.retrieve_total_course_num
       return @total_course_num if @total_course_num
-      
+
       # Retrieve the total number of courses on the catlog
-	  json_resp = acquire_json_response
-	  puts json_resp.class
-	  @total_course_num = json_resp['courses'].size
-    end  
+      json_resp = acquire_json_response
+      puts json_resp.class
+      @total_course_num = json_resp['courses'].size
+    end
   end
 end
