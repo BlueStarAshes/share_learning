@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 $LOAD_PATH.unshift File.join(File.dirname(__FILE__), *%w(.. lib))
-require 'Share_learning'
+require 'share_learning'
 
 def show(course)
   puts 'title: ' + course[:title]
@@ -12,17 +12,17 @@ end
 def help
   puts 'USAGE: udacity [command]'
   puts 'command: '
-  puts "  - all: show all the courses information in Udacity"
-  puts "  - id: search for a course by specific course id"
-  puts "  - title: search for a course by specific course title"
-  puts "  - search: search for courses related to the keyword"
+  puts '  - all: show all the courses information in Udacity'
+  puts '  - id: search for a course by specific course id'
+  puts '  - title: search for a course by specific course title'
+  puts '  - search: search for courses related to the keyword'
 end
 
 def check_command_available(command)
   case command
   when 'help', 'all', 'id', 'title', 'search'
   else
-    puts 'USAGE: udacity [help] [all] [id course_id] [title course_title] [search keyowrd]' 
+    puts 'USAGE: udacity [help] [all] [id course_id] [title course_title] [search keyowrd]'
     puts "Use 'udacity help' to see more information."
     exit(1)
   end
@@ -34,7 +34,7 @@ def check_feature_available(command, feature)
     unless feature
       puts 'USAGE: udacity id [course_id]'
       exit(1)
-    end    	
+    end
   when 'title'
     unless feature
       puts 'USAGE: udacity title [course_title]'
@@ -44,14 +44,14 @@ def check_feature_available(command, feature)
     unless feature
       puts 'USAGE: udacity search [keyword]'
       exit(1)
-    end  
-  end  
+    end
+  end
 end
 
 def action(command, feature=nil)
   case command
   when 'help'
-  	help
+    help
   when 'all'
     course = Udacity::UdacityCourse.find().acquire_all_courses
     show(course)
@@ -67,14 +67,14 @@ def action(command, feature=nil)
     check_feature_available('search', feature)
     course = Udacity::UdacityCourse.find().acquire_courses_by_keywords(feature)
     if course.class == Array
-      course.each do |item| 
+      course.each do |item|
         show(item)
         puts "\n" + "------"
       end
     else
       puts 'no courses found'
     end
-  end  
+  end
 end
 
 command = ARGV[0]

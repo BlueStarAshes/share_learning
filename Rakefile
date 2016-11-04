@@ -1,23 +1,23 @@
 require 'rake/testtask'
 
 namespace :tests do
-	desc 'run all tests'
-	task all: [:spec_udacity, :spec_coursera, :spec_youtube]
+  desc 'run all tests'
+  task all: [:spec_udacity, :spec_coursera, :spec_youtube]
 
-	task :spec_udacity do
-		sh 'ruby spec/udacity_api_spec.rb'
-		puts "\n\n"
-	end
+  task :spec_udacity do
+    sh 'ruby spec/udacity_api_spec.rb'
+    puts "\n\n"
+  end
 
-	task :spec_coursera do
-		sh 'ruby spec/coursera_api_spec.rb'
-		puts "\n\n"
-	end
+  task :spec_coursera do
+    sh 'ruby spec/coursera_api_spec.rb'
+    puts "\n\n"
+  end
 
-	task :spec_youtube do
-		sh 'ruby spec/youtube_api_spec.rb'
-		puts "\n\n"
-	end
+  task :spec_youtube do
+    sh 'ruby spec/youtube_api_spec.rb'
+    puts "\n\n"
+  end
 end
 
 desc 'delete cassette fixtures'

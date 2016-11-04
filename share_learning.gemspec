@@ -3,7 +3,7 @@ $LOAD_PATH.push File.expand_path('../lib', __FILE__)
 require 'Share_learning/share_learning_version'
 
 Gem::Specification.new do |s|
-  s.name        =  'Share_learning'
+  s.name        =  'share_learning'
   s.version     =  ShareLearning::VERSION
 
   s.summary     =  'Gets learning resource from Coursera, Udacity, and Youtube.'
@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
                    'from Coursera and Udacity. '\
                    'And searches relating resource on Youtube.'
   s.authors     =  ['ashleycheng, blureze, meegoStar']
-  s.email       =  ['blureze@gmail.com', 'andy19933@gmail.com']
+  s.email       =  ['ashley830204@gmail.com', 'blureze@gmail.com', 'andy19933@gmail.com']
 
   s.files       =  `git ls-files`.split("\n")
   s.test_files  =  `git ls-files -- spec/*`.split("\n")

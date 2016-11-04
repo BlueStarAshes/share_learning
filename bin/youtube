@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 $LOAD_PATH.unshift File.join(File.dirname(__FILE__), *%w(.. lib))
-require 'Share_learning'
+require 'share_learning'
 
 keyword = ARGV[0] || ENV['KEYWORD']
 unless keyword

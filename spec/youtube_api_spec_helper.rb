@@ -8,7 +8,7 @@ require 'json'
 require 'vcr'
 require 'webmock'
 
-require_relative '../lib/share_learning' #'../lib/youtube_playlist' (share_learning.rb)
+require_relative '../lib/share_learning'
 
 FIXTURES_FOLDER = 'fixtures'.freeze
 CASSETTES_FOLDER = "#{FIXTURES_FOLDER}/cassettes".freeze

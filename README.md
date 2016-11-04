@@ -1,22 +1,22 @@
 
-# Share_learning
+# share_learning
 [![Gem Version](https://badge.fury.io/rb/Share_learning.svg)](https://badge.fury.io/rb/Share_learning)
 [![Build Status](https://travis-ci.org/BlueStarAshes/Share_learning.svg?branch=master)](https://travis-ci.org/BlueStarAshes/Share_learning)   
 
 
 ## Introduction
-`Share_learning` is aimed to be a crowd sourcing open learning platform.
+`share_learning` is aimed to be a crowd sourcing open learning platform.
 
 It collects courses links from MOOCS like Coursera, Udacity, Udemy, etc. and relating videos links on Youtube, and lets users easily find learning resources matching their familiarity to a want-to-learn subject / topic on just one website. Users can leave suggestions, tags, and ratings to each learning resource. They can also add relating learning resource links to each subject / topic.
 
 But now it is still under construction. :sweat_smile: :beer:
 
 ## Installation
-If you are working on a project, add this to your Gemfile: `gem 'Share_learning'`
+If you are working on a project, add this to your Gemfile: `gem 'share_learning'`
 
 For ad hoc installation from command line:
 
-`$ gem install Share_learning`
+`$ gem install share_learning`
 
 
 ## Setup Youtube Credentials
@@ -38,7 +38,7 @@ helps you search courses on Coursea with descriptions  containing the `[keyword]
 
 
 #### In your project
-To use `coursera` in your project, `require 'Share_learning'` in your code.
+To use `coursera` in your project, `require 'share_learning'` in your code.
 
 See the following code for more detail of the usage.
 ```ruby
@@ -60,17 +60,28 @@ courses.size.times do |i|
          "\tDescription: #{course[:description][0..100]}...\n"\
          "\tPhoto URL: #{course[:photo_url]}\n"\
          "\n"
+
+# Search courses with titles or descriptions containing a given keyword
+# results is an array of hash where each hash represents a course
+keyword = 'machine learning'
+results = Coursera::CourseraCourses.find.search_courses(:all, keyword)
+
+# Search courses with titles containing a given keyword
+results = Coursera::CourseraCourses.find.search_courses(:course_name, keyword)
+
+# Search courses with descriptions containing a given keyword
+results = Coursera::CourseraCourses.find.search_courses(:description, keyword)
 end
 ```
 
 ### Udacity
 Udacity application allows you to get the information includes title, introduction, link to the homepage and the image of the course. There are two ways to use the Udacity application:
 #### Command line
- 
+
 BASIC USAGE: `udacity [command][feature]`  
 
-`[command]` now includes `[help]`, `[all]`, `[id]`, `[title]` and `[search]` 
- * `[help]` 
+`[command]` now includes `[help]`, `[all]`, `[id]`, `[title]` and `[search]`
+ * `[help]`
     Give the introduction of how to use it.
  * `[all]`
    List all the courses on Udacity.
@@ -79,8 +90,8 @@ BASIC USAGE: `udacity [command][feature]`
  * `[title]`
    Search a particular course on Udacity with the specific course title.
  * `[search]`
-   Search courses on Udacity with the keyword. 
-   
+   Search courses on Udacity with the keyword.
+
 `[feature]` is only needed when using the command`[id]`,`[title]` and `[search]`
  * If you're using the command `[id]`, then `[feature]` is the course id
  * If you're using the command `[title]`, then `[feature]` is the course title
@@ -88,7 +99,7 @@ BASIC USAGE: `udacity [command][feature]`
  * Example: `udacity id 'cs101'` or `udacity title 'Introduction to Virtual Reality'` or `udacity search 'java'`
 
 #### In your project
- 
+
 First, `require 'Share_learning'` in your code.
 See the following example code for more usage details:
 
@@ -109,7 +120,7 @@ get_course_by_id = courses.acquire_course_by_id(course_id)
 get_course_by_id = courses.acquire_course_by_title(course_title)
 
 ```
- 
+
 
 
 ### YouTube
@@ -122,7 +133,7 @@ get_course_by_id = courses.acquire_course_by_title(course_title)
 * `require 'Share_learning'`     
 See the following example code for more usage details:     
 ```ruby
-# Access playlists data 
+# Access playlists data
 playlist_data = YouTube::YouTubePlaylist.find(keyword: 'keyword')
 playlist_data.results.each.with_index do |playlist, index|
   print "#{index + 1}. "
@@ -133,4 +144,3 @@ playlist_data.results.each.with_index do |playlist, index|
   puts
 end
 ```
-
