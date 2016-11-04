@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 $LOAD_PATH.unshift File.join(File.dirname(__FILE__), *%w(.. lib))
-require 'Share_learning'
+require 'share_learning'
 
 def command_valid?(query)
   %w(title description).include?(query)
@@ -24,13 +24,6 @@ def reject
   exit(1)
 end
 
-def require_courses
-  puts 'Requiring courses from Coursera...'
-  courses = Coursera::CourseraCourses.find.courses
-  puts '...Courses required'
-  courses
-end
-
 def show_course(course, sequence_number)
   puts "Course #{sequence_number}:\n"\
        "\tTitle: #{course[:course_name]}\n"\
@@ -40,29 +33,17 @@ def show_course(course, sequence_number)
        "\n"
 end
 
-def search_courses_by_title(search_method, keyword)
-  courses = require_courses
-  count = 0
-  courses.size.times do |i|
-    course = courses[i]
-    # puts course[:course_name].downcase
-    if course[search_method].downcase.include?(keyword)
-      count += 1
-      show_course(course, count)
-    end
-  end
-  puts "Total: #{count}"
-end
-
 def execute_command(command, keyword)
   case command
   when 'title'
-    search_method = :course_name
+    method = :course_name
   when 'description'
-    search_method = :description
+    method = :description
   end
   reject unless keyword
-  search_courses_by_title(search_method, keyword)
+  # search_courses(search_method, keyword)
+  results = Coursera::CourseraCourses.find.search_courses(method, keyword)
+  results.size.times { |i| show_course(results[i], i + 1) }
 end
 
 command = ARGV[0]

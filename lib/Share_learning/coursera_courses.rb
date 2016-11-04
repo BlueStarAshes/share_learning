@@ -16,6 +16,25 @@ module Coursera
       new(total_course_num, courses)
     end
 
+    def course_matched?(course, method, keyword)
+      available_methods = [:course_name, :description]
+      result = false
+      available_methods.each do |m|
+        next unless method == :all || m == method
+        result = true if course[m].downcase.include?(keyword)
+      end
+      result
+    end
+
+    def search_courses(method, keyword)
+      matched_courses = []
+      @courses.size.times do |i|
+        course = courses[i]
+        matched_courses.push(course) if course_matched?(course, method, keyword)
+      end
+      matched_courses
+    end
+
     def print_all_courses
       puts "#{@total_course_num} courses:"
       @courses.size.times do |i|

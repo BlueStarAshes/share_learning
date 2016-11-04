@@ -5,11 +5,12 @@ require_relative 'udacity_api'
 module Udacity
   # Service for all Udacity API calls
   class UdacityCourse
-    attr_reader :json_response
+    attr_reader :json_response, :total_course_num
 
-    def initialize(udacity_api, data)
+    def initialize(udacity_api, data, total_course_num)
       @udacity_api = udacity_api
       @json_response = data
+      @total_course_num = total_course_num
     end
 
     def create_hash(title, intro, link, image)
@@ -47,6 +48,20 @@ module Udacity
       end
     end
 
+    def acquire_courses_by_keywords(keyword)
+      course_array = []
+      value = keyword.downcase
+      @json_response['courses'].each do |course|
+        next unless course['title'].downcase.include? value or course['summary'].downcase.include? value
+        h = create_hash(course['title'], course['summary'], \
+                        course['homepage'], course['image'])
+        course_array.push(h)
+      end
+      return 'no courses found' if course_array.empty?
+      course_array  # return course_array if it is not empty
+    end
+
+
     # # get courses by skill levels ('', 'beginner', 'intermediate', 'advanced')
     # def acquire_courses_by_level(level)
     #   course_array = []
@@ -69,7 +84,8 @@ module Udacity
 
     def self.find()
       course_data = UdacityAPI.acquire_json_response
-      new(UdacityAPI, course_data)
+      total_course_num = UdacityAPI.total_course_num
+      new(UdacityAPI, course_data, total_course_num)
     end
   end
 end

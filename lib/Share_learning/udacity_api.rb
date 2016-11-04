@@ -11,5 +11,19 @@ module Udacity
       response = HTTP.get(URI.parse(UDACITY_URL))
       JSON.parse(response)
     end
+
+    # get total courses number
+    def self.total_course_num
+      @total_course_num = retrieve_total_course_num
+    end
+
+    def self.retrieve_total_course_num
+      return @total_course_num if @total_course_num
+      
+      # Retrieve the total number of courses on the catlog
+	  json_resp = acquire_json_response
+	  puts json_resp.class
+	  @total_course_num = json_resp['courses'].size
+    end  
   end
 end
