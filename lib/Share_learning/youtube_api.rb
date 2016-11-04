@@ -5,7 +5,8 @@ module YouTube
   # using YouTube API to get playlists
   class YouTubeAPI
     max_results = 8 # number of videos that should be returned
-    YouTube_URL = 'https://www.googleapis.com/youtube/v3/search?part=snippet&type=playlist&order=relevance&maxResults=' + max_results.to_s
+    YouTube_URL = 'https://www.googleapis.com/youtube/v3/search?part=snippet' + \
+      '&type=playlist&order=relevance&maxResults=' + max_results.to_s
 
     def self.config=(credentials)
       @config ? @config.update(credentials) : @config = credentials
@@ -19,7 +20,8 @@ module YouTube
     # Retrieve the search results
     def self.get_playlist(keyword)
       search_response =
-        HTTP.get(YouTube_URL + '&q=' + keyword.split().join('+') + '&key=' + config[:api_key])
+        HTTP.get(YouTube_URL + '&q=' + keyword.split().join('+') + \
+          '&key=' + config[:api_key])
       JSON.parse(search_response)
     end
   end
