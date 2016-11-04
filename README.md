@@ -1,22 +1,22 @@
 
-# Share_learning
+# share_learning
 [![Gem Version](https://badge.fury.io/rb/Share_learning.svg)](https://badge.fury.io/rb/Share_learning)
 [![Build Status](https://travis-ci.org/BlueStarAshes/Share_learning.svg?branch=master)](https://travis-ci.org/BlueStarAshes/Share_learning)   
 
 
 ## Introduction
-`Share_learning` is aimed to be a crowd sourcing open learning platform.
+`share_learning` is aimed to be a crowd sourcing open learning platform.
 
 It collects courses links from MOOCS like Coursera, Udacity, Udemy, etc. and relating videos links on Youtube, and lets users easily find learning resources matching their familiarity to a want-to-learn subject / topic on just one website. Users can leave suggestions, tags, and ratings to each learning resource. They can also add relating learning resource links to each subject / topic.
 
 But now it is still under construction. :sweat_smile: :beer:
 
 ## Installation
-If you are working on a project, add this to your Gemfile: `gem 'Share_learning'`
+If you are working on a project, add this to your Gemfile: `gem 'share_learning'`
 
 For ad hoc installation from command line:
 
-`$ gem install Share_learning`
+`$ gem install share_learning`
 
 
 ## Setup Youtube Credentials
@@ -38,7 +38,7 @@ helps you search courses on Coursea with descriptions  containing the `[keyword]
 
 
 #### In your project
-To use `coursera` in your project, `require 'Share_learning'` in your code.
+To use `coursera` in your project, `require 'share_learning'` in your code.
 
 See the following code for more detail of the usage.
 ```ruby
