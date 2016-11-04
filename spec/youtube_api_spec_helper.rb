@@ -8,15 +8,14 @@ require 'json'
 require 'vcr'
 require 'webmock'
 
-require_relative '../lib/share_learning/youtube_api.rb'
-require_relative '../lib/share_learning/youtube_playlist.rb'
+require_relative '../lib/share_learning' #'../lib/youtube_playlist' (share_learning.rb)
 
-FIXTURES_FOLDER = 'spec/fixtures'.freeze
-CASSETTES_FOLDER = '#{FIXTURES_FOLDER}/cassettes'.freeze
+FIXTURES_FOLDER = 'fixtures'.freeze
+CASSETTES_FOLDER = "#{FIXTURES_FOLDER}/cassettes".freeze
 CASSETTE_FILE = 'youtube_api'.freeze
 
 # read credentials from a Yaml file into environment variables
-if File.file?('config/credentials.yml')
-  CREDENTIALS = YAML.load(File.read('config/credentials.yml'))
-  ENV['YOUTUBE_API_KEY'] = CREDENTIALS[:api_key]
+if File.file?('../config/credentials.yml')
+  credentials = YAML.load(File.read('../config/credentials.yml'))
+  ENV['YOUTUBE_API_KEY'] = credentials[:api_key]
 end
