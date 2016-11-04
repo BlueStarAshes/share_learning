@@ -40,7 +40,7 @@ def show_course(course, sequence_number)
        "\n"
 end
 
-def search_courses_by_title(search_method, keyword)
+def search_courses(search_method, keyword)
   courses = require_courses
   count = 0
   courses.size.times do |i|
@@ -62,7 +62,7 @@ def execute_command(command, keyword)
     search_method = :description
   end
   reject unless keyword
-  search_courses_by_title(search_method, keyword)
+  search_courses(search_method, keyword)
 end
 
 command = ARGV[0]
