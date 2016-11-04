@@ -18,6 +18,7 @@ module YouTube
 
     # Get information of playlists 
     def load_data(playlists)
+      print '234'
       results = []
       playlists['items'].each do |playlist|
         title = playlist['snippet']['title']
