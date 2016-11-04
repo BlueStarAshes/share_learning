@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 $LOAD_PATH.push File.expand_path('../lib', __FILE__)
-require 'Share_learning/share_learning_version'
+require 'share_learning/share_learning_version'
 
 Gem::Specification.new do |s|
   s.name        =  'share_learning'
@@ -28,6 +28,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'flog', '~> 4.4'
   s.add_development_dependency 'flay', '~> 2.8'
   s.add_development_dependency 'rubocop', '~> 0.44'
-  s.homepage    =  'https://github.com/BlueStarAshes/Share_learning'
+  s.homepage    =  'https://github.com/BlueStarAshes/share_learning'
   s.license     =  'MIT'
 end
