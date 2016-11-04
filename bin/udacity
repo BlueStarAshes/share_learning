@@ -12,16 +12,16 @@ end
 def help
   puts 'USAGE: udacity [command]'
   puts 'command: '
-  puts "  - all: show all the courses information in Udacity"
-  puts "  - id: search for a course by course id"
-  puts "  - title: search for a course by course title"  
+  puts '  - all: show all the courses information in Udacity'
+  puts '  - id: search for a course by course id'
+  puts '  - title: search for a course by course title' 
 end
 
 def check_command_available(command)
   case command
   when 'help', 'all', 'id', 'title'
   else
-    puts 'USAGE: udacity [help] [all] [id course_id] [title course_title]' 
+    puts 'USAGE: udacity [help] [all] [id course_id] [title course_title]'
     puts "Use 'udacity help' to see more information."
     exit(1)
   end
@@ -33,19 +33,19 @@ def check_feature_available(command, feature)
     unless feature
       puts 'USAGE: udacity id [course_id]'
       exit(1)
-    end    	
+    end	
   when 'title'
     unless feature
       puts 'USAGE: udacity title [course_title]'
       exit(1)
-    end  
+    end
   end
 end
 
 def action(command, feature=nil)
   case command
   when 'help'
-  	help
+    help
   when 'all'
     course = Udacity::UdacityCourse.find().acquire_all_courses
     show(course)

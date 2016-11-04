@@ -26,26 +26,26 @@ describe 'Udacity executable files' do
 
   it 'should get course by id successfully' do
     result = action('id', 'cs101')
-    result.must_equal ( UDACITY_RESULT['get_course_by_id'] )
+    result.must_equal (UDACITY_RESULT['get_course_by_id'])
   end
 
   it 'should get course by title successfully' do
     result = action('title', 'Intro to Java Programming')
-    result.must_equal ( UDACITY_RESULT['get_course_by_title'] )   
+    result.must_equal (UDACITY_RESULT['get_course_by_title'])  
   end
 
   it 'should throw error message when given wrong command' do
     result = check_command_available('ttt')
-    result.must_equal ( UDACITY_RESULT['error_command'] )  
+    result.must_equal (UDACITY_RESULT['error_command'])
   end
 
   it 'should throw error message when given wrong feature for id' do
     result = check_feature_available('ttt')
-    result.must_equal ( UDACITY_RESULT['error_feature']['id'] )  
+    result.must_equal (UDACITY_RESULT['error_feature']['id'])
   end
 
   it 'should throw error message when given wrong feature for title' do
     result = check_feature_available('ttt')
-    result.must_equal ( UDACITY_RESULT['error_feature']['title'] )  
-  end  
+    result.must_equal (UDACITY_RESULT['error_feature']['title'])
+  end
 end
