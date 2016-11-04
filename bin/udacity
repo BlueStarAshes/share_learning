@@ -13,15 +13,16 @@ def help
   puts 'USAGE: udacity [command]'
   puts 'command: '
   puts "  - all: show all the courses information in Udacity"
-  puts "  - id: search for a course by course id"
-  puts "  - title: search for a course by course title"  
+  puts "  - id: search for a course by specific course id"
+  puts "  - title: search for a course by specific course title"
+  puts "  - search: search for courses related to the keyword"
 end
 
 def check_command_available(command)
   case command
-  when 'help', 'all', 'id', 'title'
+  when 'help', 'all', 'id', 'title', 'search'
   else
-    puts 'USAGE: udacity [help] [all] [id course_id] [title course_title]' 
+    puts 'USAGE: udacity [help] [all] [id course_id] [title course_title] [search keyowrd]' 
     puts "Use 'udacity help' to see more information."
     exit(1)
   end
@@ -38,8 +39,13 @@ def check_feature_available(command, feature)
     unless feature
       puts 'USAGE: udacity title [course_title]'
       exit(1)
+    end
+  when 'search'
+    unless feature
+      puts 'USAGE: udacity search [keyword]'
+      exit(1)
     end  
-  end
+  end  
 end
 
 def action(command, feature=nil)
@@ -57,7 +63,18 @@ def action(command, feature=nil)
     check_feature_available('title', feature)
     course = Udacity::UdacityCourse.find().acquire_course_by_title(feature)
     show(course)
-  end
+  when 'search'
+    check_feature_available('search', feature)
+    course = Udacity::UdacityCourse.find().acquire_courses_by_keywords(feature)
+    if course.class == Array
+      course.each do |item| 
+        show(item)
+        puts "\n" + "------"
+      end
+    else
+      puts 'no courses found'
+    end
+  end  
 end
 
 command = ARGV[0]

@@ -47,6 +47,20 @@ module Udacity
       end
     end
 
+    def acquire_courses_by_keywords(keyword)
+      course_array = []
+      value = keyword.downcase
+      @json_response['courses'].each do |course|
+        next unless course['title'].downcase.include? value or course['summary'].downcase.include? value
+        h = create_hash(course['title'], course['summary'], \
+                        course['homepage'], course['image'])
+        course_array.push(h)
+      end
+      return 'no courses found' if course_array.empty?
+      course_array  # return course_array if it is not empty
+    end
+
+
     # # get courses by skill levels ('', 'beginner', 'intermediate', 'advanced')
     # def acquire_courses_by_level(level)
     #   course_array = []
