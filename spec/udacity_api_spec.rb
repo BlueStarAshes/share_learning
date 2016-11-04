@@ -45,6 +45,11 @@ describe 'Udacity course' do
     course.nil?.must_equal false
   end
 
+  it 'should get the number of course successfully' do
+    udacity = Udacity::UdacityCourse.find()
+    udacity.total_course_num.must_be :>=, 0
+  end
+
   # it 'should get courses by level successfully' do
   #   udacity = Udacity::UdacityCourse.find()
   #   course = udacity.acquire_courses_by_level('beginner')
