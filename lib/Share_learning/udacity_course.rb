@@ -52,15 +52,20 @@ module Udacity
       ((title.include? keyword) || (summary.include? keyword))
     end
 
+    def append_course(course_array, course)
+      h = create_hash(course['title'], course['summary'], \
+                      course['homepage'], course['image'])
+      course_array.push(h)
+      course_array
+    end
+
     def acquire_courses_by_keywords(keyword)
       course_array = []
       @json_response['courses'].each do |course|
         next unless substring?(course['title'].downcase, \
                                course['summary'].downcase, keyword.downcase)
 
-        h = create_hash(course['title'], course['summary'], \
-                        course['homepage'], course['image'])
-        course_array.push(h)
+        course_array = append_course(course_array, course)
       end
 
       return 'no courses found' if course_array.empty?
