@@ -69,20 +69,23 @@ Udacity application allows you to get the information includes title, introducti
  
 BASIC USAGE: `udacity [command][feature]`  
 
-`[command]` now includes `[help]`, `[all]`, `[id]` and `[title]` 
+`[command]` now includes `[help]`, `[all]`, `[id]`, `[title]` and `[search]` 
  * `[help]` 
     Give the introduction of how to use it.
  * `[all]`
    List all the courses on Udacity.
  * `[id]`
-   Search a particular course on Udacity with the course id.
+   Search a particular course on Udacity with the specific course id.
  * `[title]`
-   Search a particular course on Udacity with the course title.   
+   Search a particular course on Udacity with the specific course title.
+ * `[search]`
+   Search courses on Udacity with the keyword. 
    
-`[feature]` is only needed when using the command`[id]` and `[title]`
+`[feature]` is only needed when using the command`[id]`,`[title]` and `[search]`
  * If you're using the command `[id]`, then `[feature]` is the course id
  * If you're using the command `[title]`, then `[feature]` is the course title
- * Example: `udacity id 'cs101'` or `udacity title 'Introduction to Virtual Reality'` 
+ * If you're using the command `[search]`, then `[feature]` is the keyword you want to search
+ * Example: `udacity id 'cs101'` or `udacity title 'Introduction to Virtual Reality'` or `udacity search 'java'`
 
 #### In your project
  
