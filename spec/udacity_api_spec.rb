@@ -30,13 +30,13 @@ describe 'Udacity course' do
   it 'should get course by id successfully' do
     udacity = Udacity::UdacityCourse.find()
     course = udacity.acquire_course_by_id('cs101')
-    course.must_equal ( UDACITY_RESULT[:get_course_by_id] )
+    course.must_equal (UDACITY_RESULT[:get_course_by_id])
   end
 
   it 'should get course by title successfully' do
     udacity = Udacity::UdacityCourse.find()
     course = udacity.acquire_course_by_title('Intro to Java Programming')
-    course.must_equal ( UDACITY_RESULT[:get_course_by_title] )   
+    course.must_equal (UDACITY_RESULT[:get_course_by_title])  
   end
 
   it 'should get course by keywords successfully' do

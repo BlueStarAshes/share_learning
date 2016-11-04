@@ -12,10 +12,10 @@ end
 def help
   puts 'USAGE: udacity [command]'
   puts 'command: '
-  puts "  - all: show all the courses information in Udacity"
-  puts "  - id: search for a course by specific course id"
-  puts "  - title: search for a course by specific course title"
-  puts "  - search: search for courses related to the keyword"
+  puts '  - all: show all the courses information in Udacity'
+  puts '  - id: search for a course by specific course id'
+  puts '  - title: search for a course by specific course title'
+  puts '  - search: search for courses related to the keyword'
 end
 
 def check_command_available(command)
@@ -51,7 +51,7 @@ end
 def action(command, feature=nil)
   case command
   when 'help'
-  	help
+    help
   when 'all'
     course = Udacity::UdacityCourse.find().acquire_all_courses
     show(course)
