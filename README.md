@@ -63,6 +63,7 @@ courses.size.times do |i|
 
 # Search courses with titles or descriptions containing a given keyword
 # results is an array of hash where each hash represents a course
+keyword = 'machine learning'
 results = Coursera::CourseraCourses.find.search_courses(:all, keyword)
 
 # Search courses with titles containing a given keyword
