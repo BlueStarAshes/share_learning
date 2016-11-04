@@ -18,7 +18,6 @@ describe 'YouTube API' do
 
   it 'should get playlist by keyword' do
     courses = YouTube::YouTubePlaylist.find(keyword: 'machine learning')
-    print courses.results
     courses.results.count.must_be :>=, 0
   end
 end
