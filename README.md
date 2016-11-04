@@ -60,17 +60,27 @@ courses.size.times do |i|
          "\tDescription: #{course[:description][0..100]}...\n"\
          "\tPhoto URL: #{course[:photo_url]}\n"\
          "\n"
+
+# Search courses with titles or descriptions containing a given keyword
+# results is an array of hash where each hash represents a course
+results = Coursera::CourseraCourses.find.search_courses(:all, keyword)
+
+# Search courses with titles containing a given keyword
+results = Coursera::CourseraCourses.find.search_courses(:course_name, keyword)
+
+# Search courses with descriptions containing a given keyword
+results = Coursera::CourseraCourses.find.search_courses(:description, keyword)
 end
 ```
 
 ### Udacity
 Udacity application allows you to get the information includes title, introduction, link to the homepage and the image of the course. There are two ways to use the Udacity application:
 #### Command line
- 
+
 BASIC USAGE: `udacity [command][feature]`  
 
-`[command]` now includes `[help]`, `[all]`, `[id]`, `[title]` and `[search]` 
- * `[help]` 
+`[command]` now includes `[help]`, `[all]`, `[id]`, `[title]` and `[search]`
+ * `[help]`
     Give the introduction of how to use it.
  * `[all]`
    List all the courses on Udacity.
@@ -79,8 +89,8 @@ BASIC USAGE: `udacity [command][feature]`
  * `[title]`
    Search a particular course on Udacity with the specific course title.
  * `[search]`
-   Search courses on Udacity with the keyword. 
-   
+   Search courses on Udacity with the keyword.
+
 `[feature]` is only needed when using the command`[id]`,`[title]` and `[search]`
  * If you're using the command `[id]`, then `[feature]` is the course id
  * If you're using the command `[title]`, then `[feature]` is the course title
@@ -88,7 +98,7 @@ BASIC USAGE: `udacity [command][feature]`
  * Example: `udacity id 'cs101'` or `udacity title 'Introduction to Virtual Reality'` or `udacity search 'java'`
 
 #### In your project
- 
+
 First, `require 'Share_learning'` in your code.
 See the following example code for more usage details:
 
@@ -109,7 +119,7 @@ get_course_by_id = courses.acquire_course_by_id(course_id)
 get_course_by_id = courses.acquire_course_by_title(course_title)
 
 ```
- 
+
 
 
 ### YouTube
@@ -122,7 +132,7 @@ get_course_by_id = courses.acquire_course_by_title(course_title)
 * `require 'Share_learning'`     
 See the following example code for more usage details:     
 ```ruby
-# Access playlists data 
+# Access playlists data
 playlist_data = YouTube::YouTubePlaylist.find(keyword: 'keyword')
 playlist_data.results.each.with_index do |playlist, index|
   print "#{index + 1}. "
@@ -133,4 +143,3 @@ playlist_data.results.each.with_index do |playlist, index|
   puts
 end
 ```
-
