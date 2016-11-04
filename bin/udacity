@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 $LOAD_PATH.unshift File.join(File.dirname(__FILE__), *%w(.. lib))
-require 'Share_learning'
+require 'share_learning'
 
 def show(course)
   puts 'title: ' + course[:title]
@@ -22,7 +22,7 @@ def check_command_available(command)
   case command
   when 'help', 'all', 'id', 'title', 'search'
   else
-    puts 'USAGE: udacity [help] [all] [id course_id] [title course_title] [search keyowrd]' 
+    puts 'USAGE: udacity [help] [all] [id course_id] [title course_title] [search keyowrd]'
     puts "Use 'udacity help' to see more information."
     exit(1)
   end
@@ -34,7 +34,7 @@ def check_feature_available(command, feature)
     unless feature
       puts 'USAGE: udacity id [course_id]'
       exit(1)
-    end    	
+    end
   when 'title'
     unless feature
       puts 'USAGE: udacity title [course_title]'
@@ -44,8 +44,8 @@ def check_feature_available(command, feature)
     unless feature
       puts 'USAGE: udacity search [keyword]'
       exit(1)
-    end  
-  end  
+    end
+  end
 end
 
 def action(command, feature=nil)
@@ -67,14 +67,14 @@ def action(command, feature=nil)
     check_feature_available('search', feature)
     course = Udacity::UdacityCourse.find().acquire_courses_by_keywords(feature)
     if course.class == Array
-      course.each do |item| 
+      course.each do |item|
         show(item)
         puts "\n" + "------"
       end
     else
       puts 'no courses found'
     end
-  end  
+  end
 end
 
 command = ARGV[0]
