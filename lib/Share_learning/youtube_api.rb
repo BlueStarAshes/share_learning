@@ -13,8 +13,7 @@ module YouTube
 
     def self.config
       return @config if @config
-      @config = { api_key: ENV['YOUTUBE_API_KEY'], #export YOUTUBE_API_KEY=....
-                  keyword: ENV['KEYWORD']}
+      @config = { api_key: ENV['YOUTUBE_API_KEY']} # export YOUTUBE_API_KEY=....
     end
 
     #Retrieve the search results  
