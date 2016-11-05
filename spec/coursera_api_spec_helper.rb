@@ -6,7 +6,7 @@ require 'minitest/rg'
 require 'vcr'
 require 'webmock'
 
-require_relative '../lib/Share_learning/coursera_courses.rb'
+require_relative '../lib/share_learning/coursera_courses.rb'
 
 FIXTURE_FOLDER = 'spec/fixtures'.freeze
 CASSETTES_FOLDER = "#{FIXTURE_FOLDER}/cassettes".freeze

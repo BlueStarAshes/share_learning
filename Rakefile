@@ -28,21 +28,21 @@ task :wipe do
 end
 
 namespace :quality do
-  desc 'run all quality checks'
-  task all: [:rubocop, :flog, :flay]
+	desc 'run all quality checks'
+	task all: [:flog, :flay, :rubocop]
 
-  task :rubocop do
-    sh 'rubocop lib/udacity_course.rb lib/coursera_* lib/youtube_playlist.rb'
-    puts "\n\n"
-  end
+	task :rubocop do
+		sh 'rubocop lib/share_learning/udacity_course.rb lib/share_learning/coursera_* lib/share_learning/youtube_playlist.rb'
+		puts "\n\n"
+	end
 
-  task :flog do
-    sh 'flog lib/udacity_course.rb lib/coursera_* lib/youtube_playlist.rb'
-    puts "\n\n"
-  end
+	task :flog do
+		sh 'flog lib/share_learning/udacity_course.rb lib/share_learning/coursera_* lib/share_learning/youtube_playlist.rb'
+		puts "\n\n"
+	end
 
-  task :flay do
-    sh 'flay lib/udacity_course.rb lib/coursera_* lib/youtube_playlist.rb'
-    puts "\n\n"
-  end
+	task :flay do
+		sh 'flay lib/share_learning/udacity_course.rb lib/share_learning/coursera_* lib/share_learning/youtube_playlist.rb'
+		puts "\n\n"
+	end
 end

@@ -5,7 +5,7 @@ require 'share_learning'
 
 keyword = ARGV[0] || ENV['KEYWORD']
 unless keyword
-  puts 'USAGE: share_learning [keyword]'
+  puts 'USAGE: youtube [keyword]'
   exit(1)
 end
 
