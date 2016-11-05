@@ -67,8 +67,6 @@ module Udacity
 
         course_array = append_course(course_array, course)
       end
-
-      return 'no courses found' if course_array.empty?
       course_array # return course_array if it is not empty
     end
 
