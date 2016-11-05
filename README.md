@@ -1,7 +1,7 @@
 
 # share_learning
-[![Gem Version](https://badge.fury.io/rb/Share_learning.svg)](https://badge.fury.io/rb/Share_learning)
-[![Build Status](https://travis-ci.org/BlueStarAshes/Share_learning.svg?branch=master)](https://travis-ci.org/BlueStarAshes/Share_learning)   
+[![Gem Version](https://badge.fury.io/rb/share_learning.svg)](https://badge.fury.io/rb/share_learning)
+[![Build Status](https://travis-ci.org/BlueStarAshes/share_learning.svg?branch=master)](https://travis-ci.org/BlueStarAshes/share_learning)   
 
 
 ## Introduction
