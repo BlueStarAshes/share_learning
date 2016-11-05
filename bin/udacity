@@ -66,13 +66,13 @@ def action(command, feature=nil)
   when 'search'
     check_feature_available('search', feature)
     course = Udacity::UdacityCourse.find().acquire_courses_by_keywords(feature)
-    if course.class == Array
+    if course.empty?
+      puts 'no courses found'
+    else
       course.each do |item|
         show(item)
         puts "\n" + "------"
-      end
-    else
-      puts 'no courses found'
+      end      
     end
   end
 end
