@@ -67,7 +67,7 @@ module Udacity
 
         course_array = append_course(course_array, course)
       end
-      course_array # return course_array if it is not empty
+      course_array
     end
 
     # # get courses by skill levels ('', 'beginner', 'intermediate', 'advanced')
