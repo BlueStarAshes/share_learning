@@ -100,7 +100,7 @@ BASIC USAGE: `udacity [command][feature]`
 
 #### In your project
 
-First, `require 'Share_learning'` in your code.
+First, `require 'share_learning'` in your code.
 See the following example code for more usage details:
 
 ```ruby
@@ -130,7 +130,7 @@ get_course_by_id = courses.acquire_course_by_title(course_title)
     * `[keyword]` - helps you search and get information of playlists on YouTube.
 
 #### In your project
-* `require 'Share_learning'`     
+* `require 'share_learning'`     
 See the following example code for more usage details:     
 ```ruby
 # Access playlists data
