@@ -20,13 +20,15 @@ module YouTube
     def load_data(playlists)
       results = []
       playlists['items'].each do |playlist|
+        playlistId = playlist['id']['playlistId']
         title = playlist['snippet']['title']
         des = playlist['snippet']['description']
         image = playlist['snippet']['thumbnails']['high']['url']
         playlistId = playlist['id']['playlistId']
         url = 'https://www.youtube.com/channel/' + playlistId
-        results.push({'title' => title, 'description' => des, 'image' => image, 'url' => url})
+        results.push({'playlistId' => playlistId, 'title' => title, 'description' => des, 'image' => image, 'url' => url})
       end
+      print results
       results
     end
   end

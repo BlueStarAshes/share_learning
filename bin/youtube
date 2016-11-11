@@ -14,6 +14,7 @@ playlist_data = YouTube::YouTubePlaylist.find(keyword: keyword)
 playlist_data.results.each.with_index do |playlist, index|
   print "#{index + 1}. "
   puts "Playlist on YouTube: #{playlist['title']}"
+  puts "Playlist ID: #{playlist['playlistId']}"
   puts "Description: #{playlist['description']}"
   puts "Image: #{playlist['image']}"
   puts "URL: #{playlist['url']}"
