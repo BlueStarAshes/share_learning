@@ -70,6 +70,7 @@ module Udacity
 
         course_array = append_course(course_array, course)
       end
+      
       course_array
     end
 
@@ -102,5 +103,3 @@ module Udacity
   end
 
 end
-# udacity = Udacity::UdacityCourse.find()
-# puts udacity.acquire_course_by_id('cs101')
