@@ -26,6 +26,7 @@ end
 
 def show_course(course, sequence_number)
   puts "Course #{sequence_number}:\n"\
+       "\tID: #{course[:course_id]}\n"\
        "\tTitle: #{course[:course_name]}\n"\
        "\tType: #{course[:course_type]}\n"\
        "\tSlug: #{course[:course_slug]}\n"\
@@ -42,6 +43,7 @@ def execute_command(command, keyword)
   end
   reject unless keyword
   # search_courses(search_method, keyword)
+  puts 'retrieving courses from Coursera...'
   results = Coursera::CourseraCourses.find.search_courses(method, keyword)
   results.size.times { |i| show_course(results[i], i + 1) }
 end
