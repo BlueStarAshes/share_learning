@@ -28,7 +28,6 @@ module YouTube
         url = 'https://www.youtube.com/channel/' + playlistId
         results.push({'playlistId' => playlistId, 'title' => title, 'description' => des, 'image' => image, 'url' => url})
       end
-      print results
       results
     end
   end
