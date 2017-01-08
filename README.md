@@ -105,7 +105,7 @@ See the following example code for more usage details:
 
 ```ruby
 # Access courses data
-courses = Udacity::UdacityCourse.find()
+courses = Udacity::UdacityCourse.find
 
 # Acquire all courses information
 all_courses = courses.acquire_all_courses

@@ -30,10 +30,9 @@ module YouTube
           image = playlist['snippet']['thumbnails']['high']['url']
         end
         playlistId = playlist['id']['playlistId']
-        url = 'https://www.youtube.com/channel/' + playlistId
+        url = 'https://www.youtube.com/playlist?list=' + playlistId
         results.push({'playlistId' => playlistId, 'title' => title, 'description' => des, 'image' => image, 'url' => url})
       end
-      print results
       results
     end
   end
