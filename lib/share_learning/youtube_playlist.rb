@@ -23,7 +23,12 @@ module YouTube
         playlistId = playlist['id']['playlistId']
         title = playlist['snippet']['title']
         des = playlist['snippet']['description']
-        image = playlist['snippet']['thumbnails']['high']['url']
+        # image = playlist['snippet']['thumbnails']['high']['url']
+        if playlist['snippet']['thumbnails']['high']['url'].nil?
+          image = ''
+        else
+          image = playlist['snippet']['thumbnails']['high']['url']
+        end
         playlistId = playlist['id']['playlistId']
         url = 'https://www.youtube.com/playlist?list=' + playlistId
         results.push({'playlistId' => playlistId, 'title' => title, 'description' => des, 'image' => image, 'url' => url})
